@@ -8,8 +8,8 @@ command -v pip3 &>/dev/null || { echo >&2 "pip for Python 3 is not installed.  A
 pip3 install nltk scikit-learn
 
 # Move the script, text file and json to /usr/local/bin
-sudo cp linuxsearch.py /usr/local/bin/linuxsearch
-sudo cp linuxmanual.py /usr/local/bin/linuxmanual
+sudo cp linuxsearch.py /usr/local/bin/search
+sudo cp linuxmanual.py /usr/local/bin/manual
 sudo cp commands.txt /usr/local/bin/commands.txt
 sudo cp commands.json /usr/local/bin/commands.json
 sudo cp commands2.txt /usr/local/bin/commands2.txt
