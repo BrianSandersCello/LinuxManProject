@@ -1,0 +1,1991 @@
+cd - Change directory
+Description: This command is used to change the current working directory.
+Common flags:
+-P : Use the physical directory structure without following symbolic links.
+-L : Follow symbolic links when changing directories.
+-v : Verbose mode. Print out the name of the directory being changed to.
+Usage example: To change the current working directory to /home/user/Documents, run the following command: cd /home/user/Documents
+
+ls - List directory contents
+Description: This command is used to list the files and directories in the current directory.
+Common flags:
+-a : Show hidden files and directories.
+-l : Use a long listing format that shows file permissions, ownership, and size.
+-h : Use human-readable file sizes (e.g. 1K, 2M, 3G).
+Usage example: To list all files and directories in the current directory, run the following command: ls
+
+pwd - Print working directory
+Description: This command is used to print the current working directory.
+Common flags:
+-L : Use the physical directory structure without following symbolic links.
+-P : Use the logical directory structure that follows symbolic links.
+-v : Verbose mode. Print out the name of the current working directory.
+Usage example: To print the current working directory, run the following command: pwd
+
+cp - Copy files and directories
+Description: This command is used to copy files and directories from one location to another.
+Common flags:
+-r : Copy directories recursively.
+-i : Interactive mode. Prompt before overwriting existing files.
+-v : Verbose mode. Print out the names of the files being copied.
+Usage example: To copy the file "file.txt" from the current directory to the directory "/home/user/Documents", run the following command: cp file.txt /home/user/Documents
+
+cat -  Display file contents
+Description: This command is used to display the contents of a file on the standard output.
+Common flags:
+-n : Display line numbers.
+-E : Display a dollar sign ($) at the end of each line.
+-v : Display non-printable characters as ^ and M- notation.
+Usage example: To display the contents of a file named "example.txt" on the standard output, run the following command: cat example.txt
+
+mv - Move or rename files and directories, change the name of a file.
+Description: This command is used to move or rename files and directories, change the name of a file or directory.
+Common flags:
+-i : Interactive mode. Prompt before overwriting existing files.
+-v : Verbose mode. Print out the names of the files being moved or renamed.
+-u : Update mode. Only move or rename files that are newer than the destination file or directory.
+Usage example: To rename the file "oldname.txt" to "newname.txt" in the current directory, run the following command: mv oldname.txt newname.txt
+
+rm - Remove files and directories, delete a file or directory.
+Description: This command is used to remove, delete files and directories.
+Common flags:
+-r : Remove directories recursively.
+-f : Force mode. Do not prompt for confirmation before removing files or directories.
+-v : Verbose mode. Print out the names of the files or directories being removed.
+Usage example: To remove the file "file.txt" from the current directory, run the following command: rm file.txt
+
+man - Display manual pages
+Description: This command is used to display the manual pages for a given command or program, providing detailed information on its usage, options, and functionality.
+Common flags:
+-k : Search for a keyword in the short description of all available manual pages.
+-f : Display the manual page names and short descriptions for a given command (similar to 'whatis').
+-t : Output the manual page in a format suitable for printing or viewing in a PDF viewer.
+Usage example: To display the manual page for the 'ls' command, run the following command: man ls
+
+echo - Display a line of text
+Description: The echo command in Linux is used to display a line of text or string on the standard output or a file.
+Common flags:
+-n : Do not output the trailing newline.
+-e : Enable interpretation of backslash escapes.
+-E : Disable interpretation of backslash escapes (default).
+Usage example: To print a string with a new line character and a tab, you could run the following command: echo -e "Hello World!\n\tThis is a test"
+
+scp - Secure Copy
+Description: This command is used to securely copy files and directories between two locations on a local machine, or between a local machine and a remote machine over a network, using the SSH protocol.
+Common flags:
+-P : Specify the port number of the remote SSH server.
+-r : Copy directories recursively.
+-C : Enable compression to improve transfer speed.
+-p : Preserve file attributes (permissions, timestamps).
+Usage example: To copy a file named "file.txt" from the local machine to a remote machine with the IP address 192.168.1.2 and username "remoteuser", run the following command: scp file.txt remoteuser@192.168.1.2:/path/to/destination
+
+useradd - Add a new user
+Description: This command is used to create a new user account on the system.
+Common flags:
+-d : Specify the home directory for the new user.
+-m : Create the home directory if it doesn't exist.
+-s : Specify the shell for the new user.
+-g : Specify the primary group for the new user.
+Usage example: To create a new user named "newuser" with a specified home directory, run the following command: useradd -m -d /home/newuser newuser
+
+userdel - Delete a user account
+Description: This command is used to delete an existing user account from the system.
+Common flags:
+-r : Remove the user's home directory and mail spool.
+-f : Force the removal of the user account, even if the user is still logged in.
+Usage example: To delete a user account named "olduser" and remove their home directory, run the following command: userdel -r olduser
+
+apropos - Search the manual page names and descriptions
+Description: This command is used to search the names and descriptions of manual pages for a given keyword.
+Common flags:
+-k : This flag is used to specify the keyword.
+Usage example: To find manual pages related to the keyword "network", run the following command: apropos network
+
+groupadd - Add a new group
+Description: This command is used to create a new group on the system.
+Common flags:
+-g : Specify the GID (Group ID) for the new group.
+Usage example: To create a new group named "newgroup", run the following command: groupadd newgroup
+
+groupmod - Modify a group
+Description: This command is used to modify the properties of an existing group on the system.
+Common flags:
+-n : Change the name of the group.
+-g : Change the GID (Group ID) of the group.
+Usage example: To change the name of a group named "oldgroup" to "newgroup", run the following command: groupmod -n newgroup oldgroup
+
+groupdel - Delete a group
+Description: This command is used to delete an existing group from the system.
+Usage example: To delete a group named "oldgroup", run the following command: groupdel oldgroup
+
+whois - Query the WHOIS database
+Description: This command is used to obtain domain registration information from the WHOIS database.
+Usage example: To get the WHOIS information for the domain "example.com", run the following command: whois example.com
+
+mkdir - Make directories
+Description: This command is used to create directories or subdirectories.
+Common flags:
+-m : Set the file mode (permissions) of the created directories.
+-p : Create parent directories if they do not exist.
+-v : Display a message for each directory created.
+Usage example: To create a directory named "example", run the following command: mkdir example
+
+service - Manage System V init scripts
+Description: This command is used to manage services using System V init scripts on systems that do not use the newer 'systemctl' command for managing services. It allows you to start, stop, restart, or check the status of services.
+Common flags:
+start : Start the specified service.
+stop : Stop the specified service.
+restart : Restart the specified service.
+status : Check the status of the specified service.
+Usage example: To check the status of the SSH service, run the following command: service ssh status
+
+rmdir - Name: Remove directories
+Description: This command is used to remove, delete empty directories.
+Common flags:
+-p : Remove parent directories if they become empty.
+-v : Display a message for each directory removed.
+-ignore-fail-on-non-empty : Ignore errors if a directory is not empty.
+Usage example: To remove a directory named "example", run the following command: rmdir example
+
+touch - Create a file or update the modification time of a file.
+Description: This command is used to create an empty file, make a file or update the modification time of an existing file.
+Common flags:
+-a : Only update the access time of the file.
+-c : Do not create the file if it does not exist.
+-t : Use a specific time stamp instead of the current time.
+Usage example: To create an empty file named "example.txt", run the following command: touch example.txt
+
+ln - Create links between files
+Description: This command is used to create hard links or symbolic links between files.
+Common flags:
+-s : Create a symbolic link instead of a hard link.
+-f : Remove existing destination files if they exist.
+-v : Display a message for each link created.
+Usage example: To create a symbolic link named "link" that points to a file named "example.txt", run the following command: ln -s example.txt link
+
+chmod - Change file mode (permissions)
+Description: This command is used to change the file mode (permissions) of files or directories.
+Common flags:
+-R : Recursively change the file mode of directories and their contents.
+-v : Display a message for each file or directory whose mode is changed.
+-c : Display a message only if the mode is actually changed.
+Usage example: To give the owner of a file named "example.txt" read, write, and execute permissions, run the following command: chmod u+rwx example.txt
+
+
+chown - Change file ownership 
+Description: This command is used to change the ownership of a file or directory, either the user or the group
+Common flags:
+-R : Recursively change the ownership of all files and directories under the specified directory.
+-v : Verbose mode. Print out the file ownerships of the files being changed.
+-c : Verbose mode with confirmation. Print out the file ownerships of the files being changed and prompt for confirmation.
+Usage example: To set the owner of the file "file.txt" to the user "johndoe", run the following command: chown johndoe file.txt
+
+ln - Create links
+Description: This command is used to create links between files.
+Common flags:
+-s : Create a symbolic link (soft link) instead of a hard link.
+-v : Verbose mode. Print out the names of the links being created.
+Usage example: To create a symbolic link named "link.txt" that points to the file "file.txt", run the following command: ln -s file.txt link.txt
+
+grep - Search for patterns in files
+Description: This command is used to search for patterns in files or output.
+Common flags:
+-i : Ignore case when searching for patterns.
+-v : Invert match. Print out lines that do not match the pattern.
+-r : Recursively search all files in a directory and its subdirectories.
+Usage example: To search for the pattern "hello" in the file "file.txt", and print out the matching lines, run the following command: grep "hello" file.txt
+
+less - View file contents one page at a time
+Description: This command is used to view file contents one page at a time.
+Common flags:
+-N : Display line numbers.
+-S : Chop long lines instead of wrapping them.
+-q : Quiet mode, suppresses warnings.
+Usage example: To view the contents of a file named "example.txt" one page at a time, run the following command: less example.txt
+
+more - View file contents one page at a time
+Description: This command is used to view file contents one page at a time.
+Common flags:
+-N : Display line numbers.
+-S : Chop long lines instead of wrapping them.
+-q : Quiet mode, suppresses warnings.
+Usage example: To view the contents of a file named "example.txt" one page at a time, run the following command: more example.tx
+
+printf - Format and print data
+Description: The printf command in Linux is used to format and print data to the standard output. It works similarly to the printf function in programming languages such as C and C++.
+Common flags:
+Unlike many commands, printf doesn't use flags. Instead, it uses format specifiers in the format string argument. Here are a few examples:
+%s : Print a string
+%d : Print an integer
+%f : Print a floating-point number
+\n : Insert a new line
+\t : Insert a tab
+Usage example: To print a string followed by an integer, you might run the following command: printf "The number is: %d\n" 7
+This would output: The number is: 7
+
+tar - Create or extract tar archives
+Description: This command is used to create or extract tar archives, which are collections of files and directories compressed into a single file.
+Common flags:
+-c : Create a new archive.
+-x : Extract files from an existing archive.
+-v : Verbose mode. Print out the names of the files being added to or extracted from the archive.
+Usage example: To create a new tar archive named "archive.tar" that contains all files and directories in the current directory, run the following command: tar -cvf archive.tar .
+
+gzip - Compress or decompress files
+Description: This command is used to compress or decompress files using the gzip compression algorithm.
+Common flags:
+-c : Write output to standard output instead of a file.
+-d : Decompress the specified files instead of compressing them.
+-v : Verbose mode. Print out the names of the files being compressed or decompressed.
+Usage example: To compress the file "file.txt" using gzip compression and save the compressed file as "file.txt.gz", run the following command: gzip -v file.txt
+
+gunzip - Decompress files compressed with gzip
+Description: This command is used to decompress files that have been compressed using gzip compression.
+Common flags:
+-c : Write output to standard output instead of a file.
+-v : Verbose mode. Print out the names of the files being decompressed.
+Usage example: To decompress the file "file.txt.gz" and save the decompressed file as "file.txt", run the following command: gunzip -v file.txt.gz
+
+top - Display system processes
+Description: This command is used to display information about the processes running on a system.
+Common flags:
+-d : Delay between updates in seconds.
+-p : Show processes with specific PIDs (process IDs).
+-u : Show processes for specific users.
+Usage example: To display information about all running processes in real-time, run the following command: top
+
+ps - Display process status
+Description: This command is used to display information about the processes running on a system.
+Common flags:
+-A : Show all processes, including those not associated with a terminal.
+-f : Full format. Display more detailed information about the processes.
+-u : Show processes for specific users.
+-ef: Combines the -e and -f options, displaying a full-format listing for all processes on the system.
+ps aux: Lists detailed information about all processes, including those not attached to a terminal, and provides additional information about resource usage, such as CPU and memory consumption.
+Usage example: To display information about all running processes, run the following command: ps -A
+
+xargs - Execute commands from standard input
+Description: This command is used to execute commands from standard input, usually from the output of another command.
+Common flags:
+-n : Set the maximum number of arguments to use for each command.
+-I : Replace a placeholder string with each argument.
+-r : Do not execute commands if there are no arguments.
+Usage example: To copy all files with the ".txt" extension to a backup directory named "backup", run the following command: find . -name "*.txt" | xargs cp -t backup
+
+chage - Change user password expiry information
+Description: This command is used to modify the password aging and expiry settings for a user account, allowing you to enforce password changes and set account expiration dates.
+Common flags:
+-l : Display the current password and account aging information for a user.
+-E : Set the account expiration date in the format YYYY-MM-DD (e.g., -E 2024-12-31).
+-m : Set the minimum number of days between password changes (e.g., -m 7).
+Usage example: To set the account expiration date for a user, run the following command: chage -E 2024-12-31 username
+
+tee - Write input to standard output and a file
+Description: This command is used to write input to both the standard output and a file.
+Common flags:
+-a : Append to the output file instead of overwriting it.
+-i : Ignore the SIGINT signal.
+-p : Use output buffering for interprocess communication.
+Usage example: To display the contents of a file named "example.txt" on the standard output and write it to a file named "output.txt", run the following command: cat example.txt | tee output.txt
+
+kill - Send signals to processes
+Description: This command is used to send signals to processes to terminate them or change their behavior.
+Common flags:
+-s : Specify the signal to send to the process.
+-l : List all available signals.
+-p : Send the signal to a specific process ID (PID).
+Usage example: To send the SIGTERM signal to the process with PID 1234 to terminate it, run the following command: kill 1234
+
+su - Switch user
+Description: This command is used to switch to a different user account.
+Common flags:
+-c : Execute a command as the new user.
+-s : Specify the login shell of the new user.
+-l : Simulate a full login for the new user, including setting the environment variables.
+Usage example: To switch to the user "johndoe" and simulate a full login, run the following command: su -l johndoe
+
+sudo - Execute a command as another user
+Description: This command is used to execute a command as another user, usually the superuser (root).
+Common flags:
+-u : Execute the command as a specific user instead of the superuser.
+-i : Simulate a full login for the user that the command is being executed as.
+-s : Run the command with the shell specified in the environment variable $SHELL.
+Usage example: To execute the command "ls" as the superuser, run the following command: sudo ls
+
+umask - Set file mode creation mask
+Description: This command is used to set the default permissions for newly created files and directories in the current shell session. The umask value is a 3-digit octal number that controls which permissions are removed from the default permissions (777 for directories and 666 for files).
+Common flags:
+-S : Display the umask value in a symbolic format instead of the default octal format.
+-p : Output the umask value in a format that can be reused as shell input. This is useful for scripting purposes.
+Usage example:
+To set the umask value so that newly created files have the permissions -rw-r--r-- (644) and directories have the permissions drwxr-xr-x (755), run the following command: umask 022
+To display the current umask value in a symbolic format, run the following command: umask -S
+Note: The umask value is calculated by subtracting the desired permissions from the default permissions. For instance, a umask value of 022 removes write permissions for group and others (777 - 022 = 755 for directories and 666 - 022 = 644 for files).
+
+visudo - Edit the sudoers file safely
+Description: This command is used to edit the sudoers file in a safe manner. It ensures syntax validation and prevents multiple simultaneous edits by locking the file while editing.
+Common flags:
+-c : Check the sudoers file for syntax errors without opening it for editing.
+-f : Specify an alternative sudoers file to edit (useful for testing or managing multiple sudoers files).
+-q : In combination with the '-c' flag, suppress any output and only return an exit status.
+Usage example: To edit the sudoers file using the default editor, run the following command: visudo
+
+bg - Resume stopped jobs in the background
+Description: This command is used to resume stopped jobs and run them in the background, allowing you to continue using the terminal for other tasks.
+Syntax:
+bg [job_spec]
+The job_spec refers to the job specification, which is used to identify the job you want to resume in the background. The job_spec can be a job number (e.g., %1, %2) or a process group ID.
+Usage examples:
+To resume the most recently stopped job in the background, run the following command:
+bg
+To resume a specific stopped job in the background, use the job number:
+bg %1
+Note: You can use the jobs command to list the currently running and stopped jobs along with their job numbers.
+
+fsck - File system consistency check and repair
+Description: This command is used to check and repair inconsistencies in the file system. It can be run on a specific file system or all mounted file systems.
+Common flags:
+-A : Check all mounted file systems listed in /etc/fstab.
+-y : Automatically answer 'yes' to all questions about fixing errors.
+-f : Force a check, even if the file system appears to be clean.
+Usage example: To check and repair errors on a specific file system, run the following command: fsck /dev/sda1
+
+jobs - List active jobs
+Description: This command is used to display the status of jobs that were started in the current shell session, including running, stopped, and background jobs.
+Common flags:
+-l : Display process group IDs and more information about each job.
+-n : Show only jobs that have changed status since the last notification.
+-p : Display only the process group ID of each job.
+Usage example: To list all active jobs with their process group IDs, run the following command: jobs -l
+
+lsof - List open files
+Description: This command is used to display a list of open files, including regular files, directories, and network connections, along with the processes that have opened them.
+Common flags:
+-i : Display only network connections (optionally specify an address or port, e.g., -i :80 or -i @192.168.1.1).
+-u : Display only files opened by a specific user (e.g., -u root).
+-p : Display only files opened by a specific process ID (e.g., -p 1234).
+Usage example: To list all open files by a specific user, run the following command: lsof -u username
+
+apt-get - Package management utility for Debian-based systems
+Description: This command is used to manage packages (software) on Debian-based systems.
+Common flags:
+install : Install a package.
+remove : Remove a package.
+update : Update the package list from the repositories.
+Usage example: To install the package "apache2" from the repositories, run the following command: sudo apt-get install apache2
+
+yum - Package management utility for Red Hat-based systems
+Description: This command is used to manage packages (software) on Red Hat-based systems.
+Common flags:
+install : Install a package.
+remove : Remove a package.
+update : Update the package list from the repositories.
+Usage example: To install the package "httpd" from the repositories, run the following command: sudo yum install httpd
+
+systemctl - Control the systemd system and service manager
+Description: This command is used to control the systemd system and service manager, which is responsible for starting and stopping services on Linux systems.
+Common flags:
+start : Start a service.
+stop : Stop a service.
+restart : Restart a service.
+Usage example: To start the Apache web server service, run the following command: sudo systemctl start apache2
+
+journalctl - Query the systemd journal
+Description: This command is used to query the systemd journal, which is a log of system events and messages.
+Common flags:
+-u : Show journal entries for a specific unit (service).
+-p : Show journal entries with a specific priority (severity).
+-f : Follow the journal in real-time.
+Usage example: To show the last 50 journal entries for the Apache web server service, run the following command: sudo journalctl -u apache2 -n 50
+
+netstat - Display network connections and statistics
+Description: This command is used to display information about network connections and statistics.
+Common flags:
+-a : Show all sockets (both listening and non-listening).
+-n : Do not resolve hostnames or port numbers.
+-p : Show the process that owns each socket.
+Usage example: To show all TCP connections and their associated processes, run the following command: netstat -atnp
+
+ping - Test network connectivity
+Description: This command is used to test network connectivity by sending ICMP echo requests to a specified host.
+Common flags:
+-c : Number of echo requests to send before stopping.
+-i : Interval between echo requests in seconds.
+-s : Size of the payload (data) in each echo request in bytes.
+Usage example: To test the network connectivity to the host "google.com" by sending 5 echo requests with a payload size of 64 bytes, run the following command: ping -c 5 -s 64 google.com
+
+ifconfig - Configure network interfaces
+Description: This command is used to configure network interfaces on a system.
+Common flags:
+-a : Show all network interfaces, including those that are down.
+-u : Show only interfaces that are up.
+-v : Verbose mode. Print out more detailed information about the interfaces.
+Usage example: To show information about all network interfaces on the system, run the following command: ifconfig -a
+
+ip - Configure network interfaces and routing
+Description: This command is used to configure network interfaces and routing on a system.
+Common flags:
+addr : Show or manipulate IP addresses and associated properties.
+route : Show or manipulate the IP routing table.
+link : Show or manipulate network interfaces.
+Usage example: To show information about the IP address of the network interface "eth0", run the following command: ip addr show eth0
+
+hostname - Show or set the system's hostname
+Description: This command is used to show or set the system's hostname.
+Common flags:
+-i : Show the IP address of the hostname.
+-s : Short hostname. Only show the first part of the hostname.
+-d : Domain name. Only show the domain part of the hostname.
+Usage example: To show the system's hostname, run the following command: hostname
+
+chroot - Change the root directory for a command
+Description: This command is used to change the root directory for a command.
+Common flags:
+-u : Set the user ID for the command.
+-g : Set the group ID for the command.
+-R : Set the root directory for the command.
+Usage example: To change the root directory for the "ls" command to "/home/user", run the following command: chroot /home/user ls
+
+chattr - Change file attributes
+Description: This command is used to change the attributes of files or directories on a Linux file system.
+Common flags:
++/-a : Set/clear the append-only attribute. When set, the file can only be opened in append mode for writing.
++/-i : Set/clear the immutable attribute. When set, the file cannot be modified, deleted, or renamed.
++/-A : Set/clear the no-atime attribute. When set, the file's access time is not updated when accessed.
+Usage example: To set the append-only and immutable attributes for a file named "file.txt", run the following command: chattr +a+i file.txt
+
+lsattr - List file attributes
+Description: This command is used to display the attributes of files or directories on a Linux file system.
+Common flags:
+-a : List all files in the directory, including hidden files (those starting with a dot).
+-d : List directories like other files, rather than listing their contents.
+-R : Recursively list attributes of directories and their contents.
+Usage example: To list the attributes of all files in the current directory, including hidden files, run the following command: lsattr -a
+
+getfacl - Get file access control lists
+Description: This command is used to display the access control list (ACL) of a file or directory.
+Common flags:
+-a : Display the ACL of all files in the directory, including hidden files (those starting with a dot).
+-d : Display only the default ACL of the specified directory.
+-R : Recursively display the ACL of the specified directory and its contents.
+Usage example: To display the ACL of a file named "file.txt", run the following command: getfacl file.txt
+
+setfacl - Set file access control lists
+Description: This command is used to modify the access control list (ACL) of a file or directory.
+Common flags:
+-m : Modify the ACL of the file or directory. The modification is specified in the format "u|g|o:ID:perms", where u|g|o represents user, group, or other, ID is the user or group ID, and perms are the permissions (rwx).
+-x : Remove the specified user or group ACL entry from the file or directory.
+-R : Recursively apply the ACL modifications to the specified directory and its contents.
+Usage example: To grant read and write access to user with ID "johndoe" for a file named "file.txt", run the following command: setfacl -m u:johndoe:rw file.txt
+
+tree -Display directory structure as a tree
+Description: This command is used to display the directory structure of a directory as a tree.
+Common flags:
+-a : Show hidden files and directories.
+-L : Set the maximum depth of the tree.
+-P : Set a pattern to filter the tree.
+Usage example: To display the directory structure of the current directory as a tree, run the following command: tree
+
+df - Display disk space usage
+Description: This command is used to display information about disk space usage on the system.
+Common flags:
+-h : Human-readable output. Show sizes in a more easily understandable format.
+-T : Show the filesystem type for each mount point.
+-i : Show inode information instead of block usage information.
+Usage example: To show information about disk space usage for all mounted filesystems on the system, run the following command: df -h
+
+du - Display disk usage of files and directories
+Description: This command is used to display information about the disk usage of files and directories on the system.
+Common flags:
+-h : Human-readable output. Show sizes in a more easily understandable format.
+-s : Display only the total size of each specified file or directory.
+-c : Display a grand total of the sizes for all files and directories.
+Usage example: To show the total size of the directory "Documents" and its contents, run the following command: du -sh Documents
+
+passwd - Change user password
+Description: This command is used to change the password of a user account.
+Common flags:
+-l : Lock the user account, preventing the user from logging in.
+-u : Unlock the user account, allowing the user to log in.
+-e : Expire the user's password, requiring them to change it at their next login.
+Usage example: To change the password for the user "johndoe", run the following command: passwd johndoe
+
+ssh - Secure shell client and server
+Description: This command is used to connect to a remote system using the secure shell (SSH) protocol.
+Common flags:
+-p : Specify the port to connect to on the remote system.
+-i : Use a specific identity (private key) file for authentication.
+-X : Enable X11 forwarding, allowing graphical applications to be run remotely.
+Usage example: To connect to the remote system at IP address "192.168.1.100" with the username "johndoe", run the following command: ssh johndoe@192.168.1.100
+
+curl - Transfer data from or to a server
+Description: This command is used to transfer data to or from a server using various protocols such as HTTP, FTP, and SFTP.
+Common flags:
+-O : Write output to a local file with the same name as the remote file.
+-I : Fetch only the HTTP header of the requested resource.
+-u : Specify the user and password to use for authentication.
+Usage example: To download a file named "example.jpg" from a remote server using HTTP, run the following command: curl -O http://example.com/example.jpg
+
+wget - Non-interactive network downloader
+Description: This command is used to download files from the web using HTTP, HTTPS, and FTP protocols.
+Common flags:
+-r : Download files recursively.
+-q : Quiet mode. Suppress output except for error messages.
+-c : Continue downloading a partially downloaded file.
+Usage example: To download a file named "example.jpg" from a remote server using HTTP, run the following command: wget http://example.com/example.jpg
+
+history - View command history
+Description: This command is used to display the command history for the current user.
+Common flags:
+-c : Clear the command history.
+-a : Append new commands to the existing history instead of overwriting it.
+-r : Read the command history from the specified file instead of the default file.
+Usage example: To display the last 50 commands entered by the current user, run the following command: history 50
+
+uname - Print system information
+Description: This command is used to print system information such as the kernel version and system architecture.
+Common flags:
+-a : Show all system information.
+-r : Show the kernel release number.
+-m : Show the system architecture.
+Usage example: To display the system architecture, run the following command: uname -m
+
+whoami - Show current user name
+Description: This command is used to display the name of the current user.
+Common flags:
+None
+Usage example: To display the name of the current user, run the following command: whoami
+
+last - Show listing of last logged in users
+Description: This command is used to display a list of users who have recently logged in to the system, along with the details of their login sessions. The information is retrieved from the system's /var/log/wtmp file.
+Common flags:
+-n : Limit the number of lines displayed. Example: "-n 5" to show the last 5 entries.
+-a : Display the hostname in the last column. Useful for identifying the source of remote logins.
+-F : Show full timestamp for each entry, including the day, date, and time.
+Usage example: To display the last 10 login sessions along with the hostname, run the following command: last -n 10 -a
+
+crontab - Schedule periodic tasks
+Description: This command is used to schedule periodic tasks to run at specified times and intervals.
+Common flags:
+-e : Edit the crontab file.
+-l : Display the contents of the crontab file.
+-r : Remove the crontab file.
+Usage example: To edit the crontab file and schedule a task to run every day at 3:30am, run the following command: crontab -e and add the following line: 30 3 * * * /path/to/script
+
+lsof - List open files
+Description: This command is used to list information about files that are currently open on the system.
+Common flags:
+-u : Show files opened by a specific user.
+-i : Show files associated with a specific network connection.
+-c : Show files opened by a specific process or command.
+Usage example: To show information about all files currently open on the system, run the following command: lsof
+
+find - Search for files
+Description: This command is used to search for files and directories that match specified criteria.
+Common flags:
+-name : Search for files and directories with a specific name.
+-type : Search for files and directories of a specific type (e.g. regular file, directory, symbolic link).
+-exec : Execute a command on the files and directories that are found.
+Usage example: To find all files in the current directory and its subdirectories that have the extension ".txt", and print out their names, run the following command: 
+find . -name "*.txt" -print
+
+locate - Find files by name
+Description: This command is used to locate files on the system by name.
+Common flags:
+-r : Use a regular expression to match file names.
+-i : Ignore case when searching for file names.
+-c : Limit the number of results returned.
+Usage example: To find all files on the system with "example" in the name, run the following command: locate example
+
+which - Show the full path of (shell) commands
+Description: This command is used to identify the location of executables. The command searches for the executable specified in your system's PATH.
+Common flags:
+-a : Print all matching executables in PATH, not just the first.
+-p : Do not follow symbolic links.
+-n : Stop after writing the number of entries requested.
+Usage example: To display the path of the "python" executable, run the following command: which python
+
+whereis - Locate the binary, source, and manual page files for a command
+Description: This command is used to locate the binary, source, and man page files for the given command.
+Common flags:
+-b : Only look for binaries.
+-m : Only look for manual sections.
+-s : Only look for sources.
+Usage example: To find the binary, source, and man page files for the "ls" command, run the following command: whereis ls
+
+id - Print user and group ID
+Description: This command is used to display the current user and group ID.
+Common flags:
+-u : Display only the user ID.
+-g : Display only the group ID.
+-G : Display all group IDs for the current user.
+Usage example: To display the current user and group ID, run the following command: id
+
+groups - Show group memberships
+Description: This command is used to display the groups that the current user is a member of.
+Common flags:
+None
+Usage example: To display the groups that the current user is a member of, run the following command: groups
+
+date - Display or set the system date and time
+Description: This command is used to display or change the current date and time of the system.
+Common flags/options:
+-u : Display or set the date in Coordinated Universal Time (UTC).
+-d : Display the date specified in a string, not the current date. The string format can be complex. For example, '1 day ago', 'next Thursday', etc.
+-s : Set the date and time according to the given string.
+It's important to note that for 'date' command, the options may not have a space between the option and its argument. For example, to display a date string, you might use date -d'next Thursday'. Also, many other options are given using the following format: +%A, which would print the full weekday name. Please consult the man page for more information.
+Usage example: To display the current date and time in UTC, run the following command: date -u
+
+time - Time a command
+Description: This command is used to measure the amount of time it takes for a command to execute.
+Common flags:
+None
+Usage example: To time the execution of the "ls" command, run the following command: time ls
+
+timedatectl - Control the system time and date
+Description: This command is a utility that allows you to query and change the system clock and its settings. It's often used to set or change the current date, time, and timezone.
+Common flags:
+list-timezones : List all available timezones.
+set-timezone : Set the system timezone to the specified timezone.
+set-time : Set the system time.
+set-ntp : Enable or disable network time synchronization.
+Usage example: To set the system's timezone to 'America/New_York', run the following command: timedatectl set-timezone America/New_York
+
+hwclock - Query or set the hardware (RTC) clock
+Description: This command is used to query and set the hardware clock, also known as the Real Time Clock (RTC). The hardware clock is independent of the system clock and continues to run even when the system is turned off.
+Common flags:
+-r, --show : Display the current hardware clock time.
+-s, --hctosys : Set the system time from the hardware clock.
+-w, --systohc : Set the hardware clock from the current system time.
+--utc, --localtime : Tells the hardware clock command whether the hardware clock is set to Coordinated Universal Time or local time.
+Usage example: To set the hardware clock to the current system time, run the following command: sudo hwclock --systohc
+
+localectl - Control the system locale and keyboard layout settings
+Description: This command is used to view and change system locale and keyboard layout settings. It can be used to set the system locale, VConsole (Virtual Console) keyboard mapping, and X11 keymap.
+Common flags:
+list-locales : List all available locales.
+set-locale : Set system locale to the specified locale.
+list-keymaps : List all available keymaps.
+set-keymap : Set the system keymap to the specified keymap.
+Usage example: To set the system's locale to 'en_US.UTF-8', run the following command: sudo localectl set-locale LANG=en_US.UTF-8
+
+cut - Select columns from a file
+Description: This command is used to select specific columns from a file and display them.
+Common flags:
+-d : Set the delimiter character between columns.
+-f : Specify which columns to display.
+-s : Suppress output for lines that do not contain the delimiter character.
+Usage example: To display the second and third columns of a file named "example.txt", which uses the "|" character as a delimiter, run the following command: cut -d "|" -f 2,3 example.txt
+
+sort - Sort lines of text
+Description: This command is used to sort lines of text in a file.
+Common flags:
+-n : Sort numerically instead of alphabetically.
+-r : Reverse the order of the sort.
+-k : Sort by a specific field or column.
+Usage example: To sort the lines of a file named "example.txt" in reverse order, run the following command: sort -r example.txt
+
+uniq - Remove duplicate lines
+Description: This command is used to remove duplicate lines from a file.
+Common flags:
+-c : Prefix lines with a count of how many times they occur.
+-d : Only display lines that are duplicates.
+-u : Only display lines that are not duplicates.
+Usage example: To remove duplicate lines from a file named "example.txt", run the following command: uniq example.txt
+
+tail - Display the end of a file
+Description: This command is used to display the last few lines of a file.
+Common flags:
+-f : Follow the end of the file as it grows, like a log file.
+-n : Specify the number of lines to display.
+-q : Suppress header information when displaying multiple files.
+Usage example: To display the last 10 lines of a file named "example.txt", run the following command: tail -n 10 example.txt
+
+head - Display the beginning of a file
+Description: This command is used to display the first few lines of a file.
+Common flags:
+-n : Specify the number of lines to display.
+-c : Specify the number of bytes to display.
+-v : Display non-printing characters as visible characters.
+Usage example: To display the first 5 lines of a file named "example.txt", run the following command: head -n 5 example.txt
+
+diff - Compare files line by line
+Description: This command is used to compare two files line by line and display the differences.
+Common flags:
+-r : Recursively compare files in directories.
+-q : Only report whether files differ, not the actual differences.
+-u : Output differences in a unified format.
+Usage example: To compare two files named "file1.txt" and "file2.txt", run the following command: diff file1.txt file2.txt
+
+tr - Translate characters
+Description: This command is used to replace or delete characters in a file.
+Common flags:
+-d : Delete specified characters instead of replacing them.
+-s : Squeeze repeated characters into a single character.
+-c : Replace characters not specified in the set of characters with a specified character.
+Usage example: To replace all occurrences of the letter "a" with the letter "b" in a file named "example.txt", run the following command: tr 'a' 'b' < example.txt
+
+wc - Count lines, words, and characters in a file
+Description: This command is used to count the number of lines, words, and characters in a file.
+Common flags:
+-l : Only count the number of lines.
+-w : Only count the number of words.
+-c : Only count the number of characters.
+Usage example: To count the number of lines, words, and characters in a file named "example.txt", run the following command: wc example.txt
+
+chgrp - Change file group ownership
+Description: This command is used to change the group ownership of files or directories.
+Common flags:
+-R : Recursively change the group ownership of directories and their contents.
+-c : Display a message only if the group is actually changed.
+-v : Display a message for each file or directory whose group is changed.
+Usage example: To change the group ownership of a file named "example.txt" to a group named "newgroup", run the following command: chgrp newgroup example.txt
+
+usermod - Modify user account
+Description: This command is used to modify user accounts on the system.
+Common flags:
+-a : Add a user to a group.
+-d : Set the user's home directory.
+-G : Set the user's supplementary groups.
+Usage example: To add a user named "example" to a group named "newgroup", run the following command: usermod -aG newgroup example
+
+vim - Vi IMproved, edit the text of a file, make a file, create a file.
+Description: This command is a text editor that provides many advanced features for editing files. Create, make a file if the file does not exist.
+Common flags:
+-r : Recover a file that was not saved due to a system crash or other error.
+-u : Use a specific configuration file instead of the default.
+-p : Open multiple files in separate tabs.
+Usage example: To edit a file named "example.txt" using vim, run the following command: vim example.txt
+
+nano - Nano's ANOther editor, edit the text of a file, make a file, create a file.
+Description: This command is a simple text editor that is easier to use than vim or emacs. Create, make a file if the file does not exist.
+Common flags:
+-R : Read-only mode, disallowing changes to the file.
+-S : Save the file without prompting for confirmation.
+-m : Enable mouse support.
+Usage example: To edit a file named "example.txt" using nano, run the following command: nano example.txt
+
+awk - Pattern scanning and processing language
+Description: This command is used to process text files by searching for patterns and performing actions on the matched patterns.
+Common flags:
+-F : Set the field separator character.
+-f : Use a file containing awk commands instead of command-line arguments.
+-v : Set a variable to be used in the awk commands.
+Usage example: To display the first field of a file named "example.txt", which uses the "|" character as a field separator, run the following command: awk -F "|" '{print $1}' example.txt
+
+sed - Stream editor
+Description: This command is used to process text files by searching for patterns and performing actions on the matched patterns.
+Common flags:
+-e : Use multiple commands in a script.
+-i : Edit files in place instead of sending output to the terminal.
+-n : Suppress output for lines that do not match any pattern.
+Usage example: To replace all occurrences of the word "example" with the word "newexample" in a file named "example.txt", run the following command: sed 's/example/newexample/g' example.txt
+
+mkfs - Make file system
+Description: This command is used to create a file system on a disk partition.
+Common flags:
+-t : Specify the type of file system to create.
+-L : Set the volume label for the file system.
+-v : Verbose mode. Print out detailed information about the file system creation process.
+Usage example: To create an ext4 file system on /dev/sda1, run the following command: mkfs.ext4 /dev/sda1
+parted
+
+parted - Partition editor
+Description: This command is used to create and manipulate disk partitions, similar to fdisk.
+Common flags: 
+-l : List the partition table(s) for the specified device(s) and exit.
+-m : Machine-readable output.
+-s : Silent mode. Do not ask any questions and assume default answers.
+Usage: To create a new partition on /dev/sda, run the following commands: bash, Copy code, parted /dev/sda, mkpart primary 0% 100%, gdisk
+
+gdisk - GPT fdisk
+Description: This command is used to create and manipulate GUID Partition Table (GPT) partitions.
+Common flags:
+-l : List the partition table(s) for the specified device(s) and exit.
+-p : Print the partition table(s) and exit.
+-r : Recovery and transformation options (experts only).
+Usage: To create a new partition on /dev/sda, run the following command: gdisk /dev/sda -n
+
+mount - Mount a file system
+Description: This command is used to mount a file system to a directory in the file system hierarchy.
+Common flags:
+-t : Specify the type of file system to be mounted.
+-o : Mount options, such as read-only or read-write access.
+-v : Verbose mode. Print out detailed information about the mount process.
+Usage: To mount the ext4 file system on /dev/sda1 to the /mnt directory, run the following command: mount /dev/sda1 /mnt
+
+pvcreate - Create a physical volume
+Description: This command is used to create a physical volume for use in a Logical Volume Management (LVM) setup.
+Common flags:
+-v : Display verbose output.
+-y : Assume yes to all questions.
+-M : Set the metadata type for the physical volume.
+Usage example: To create a physical volume named "/dev/sdb1", run the following command: pvcreate /dev/sdb1
+
+pvdisplay - Display, show physical volume properties
+Description: This command is used to display information about physical volumes in an LVM setup.
+Common flags:
+-C : Display output in a comma-separated format.
+-s : Display output in a short format.
+-m : Display the mapping of physical extents to logical volumes.
+Usage example: To display information about all physical volumes in the system, run the following command: pvdisplay
+
+vgcreate - Create a volume group
+Description: This command is used to create, add, make a volume group for use in an LVM setup.
+Common flags:
+-v : Display verbose output.
+-y : Assume yes to all questions.
+-M : Set the metadata type for the volume group.
+Usage example: To create a volume group named "myvg" using physical volumes "/dev/sdb1" and "/dev/sdc1", run the following command: vgcreate myvg /dev/sdb1 /dev/sdc1
+
+vgdisplay - Display volume group properties
+Description: This command is used to display, show information about volume groups in an LVM setup.
+Common flags:
+-C : Display output in a comma-separated format.
+-s : Display output in a short format.
+-v : Display verbose output.
+Usage example: To display information about all volume groups in the system, run the following command: vgdisplay
+
+lvcreate - Create a logical volume
+Description: This command is used to create, make, add a logical volume in an LVM setup.
+Common flags:
+-v : Display verbose output.
+-y : Assume yes to all questions.
+-l : Set the size of the logical volume in terms of physical extents.
+Usage example: To create a logical volume named "mylv" with a size of 10 physical extents in volume group "myvg", run the following command: lvcreate -l 10 -n mylv myvg
+
+lvdisplay - Display logical volume properties
+Description: This command is used to display, show information about logical volumes in an LVM setup.
+Common flags:
+-C : Display output in a comma-separated format.
+-s : Display output in a short format.
+-v : Display verbose output.
+Usage example: To display information about all logical volumes in the system, run the following command: lvdisplay
+
+lvextend - Extend a logical volume
+Description: This command is used to extend, add to, grow the size of a logical volume in an LVM setup.
+Common flags:
+-v : Display verbose output.
+-L : Set the new size of the logical volume.
+-r : Resize the file system on the logical volume after extending it.
+Usage example: To extend the size of a logical volume named "mylv" in volume group "myvg" by 10 physical extents, run the following command: lvextend -l +10 /dev/myvg/mylv
+
+lvreduce - Reduce the size of a logical volume
+Description: This command is used to reduce, shrink, the size of a logical volume in an LVM setup.
+Common flags:
+-v : Display verbose output.
+-L : Set the new size of the logical volume.
+-r : Resize the file system on the logical volume after reducing it.
+Usage example: To reduce the size of a logical volume named "mylv" in volume group "myvg" by 10 physical extents, run the following command: lvreduce -l -10 /dev/myvg/mylv
+
+lvmove - Move a logical volume
+Description: This command is used to move a logical volume between physical volumes in an LVM setup.
+Common flags:
+-v : Display verbose output.
+-n : Set the name of the logical volume to move.
+-i : Set the number of stripes to use for the move operation.
+Usage example: To move a logical volume named "mylv" from physical volume "/dev/sdb1" to physical volume "/dev/sdc1", run the following command: lvmove -n mylv /dev/sdb1 /dev/sdc1
+
+pvmove - Move extents from one physical volume to another
+Description: This command is used to move physical extents from one physical volume to another in an LVM setup.
+Common flags:
+-v : Display verbose output.
+-n : Set the name of the volume group to use.
+-i : Set the number of stripes to use for the move operation.
+Usage example: To move physical extents from physical volume "/dev/sdb1" to physical volume "/dev/sdc1" in volume group "myvg", run the following command: pvmove -n myvg /dev/sdb1 /dev/sdc1
+
+vgextend - Add a physical volume to a volume group
+Description: This command is used to add a physical volume to a volume group in an LVM setup.
+Common flags:
+-v : Display verbose output.
+-f : Force the operation to complete even if it may cause data loss.
+-y : Assume yes to all questions.
+Usage example: To add physical volume "/dev/sdd1" to volume group "myvg", run the following command: vgextend myvg /dev/sdd1
+
+vgreduce - Remove a physical volume from a volume group
+Description: This command is used to remove a physical volume from a volume group in an LVM setup.
+Common flags:
+-v : Display verbose output.
+-f : Force the operation to complete even if it may cause data loss.
+-y : Assume yes to all questions.
+Usage example: To remove physical volume "/dev/sdd1" from volume group "myvg", run the following command: vgreduce myvg /dev/sdd1
+
+lvremove - Remove a logical volume
+Description: This command is used to remove a logical volume from an LVM setup.
+Common flags:
+-v : Display verbose output.
+-f : Force the operation to complete even if it may cause data loss.
+-y : Assume yes to all questions.
+Usage example: To remove a logical volume named "mylv" in volume group "myvg", run the following command: lvremove /dev/myvg/mylv
+
+vgremove - Remove a volume group
+Description: This command is used to remove, delete a volume group from an LVM setup.
+Common flags:
+-v : Display verbose output.
+-f : Force the operation to complete even if it may cause data loss.
+-y : Assume yes to all questions.
+Usage example: To remove volume group "myvg", run the following command: vgremove myvg
+
+lvs - Display, show, see logical volume properties
+Description: This command is used to display information about logical volumes in an LVM setup.
+Common flags:
+-C : Display output in a comma-separated format.
+-o : Set the output columns to display.
+-v : Display verbose output.
+Usage example: To display information about all logical volumes in the system, run the following command: lvs
+
+pvs - Display, show, see physical volume properties
+Description: This command is used to display information about physical volumes in an LVM setup.
+Common flags:
+-C : Display output in a comma-separated format.
+-o : Set the output columns to display.
+-v : Display verbose output.
+Usage example: To display information about all physical volumes in the system, run the following command: pvs
+
+vgs - Display volume group properties
+Description: This command is used to display information about volume groups in an LVM setup.
+Common flags:
+-C : Display output in a comma-separated format.
+-o : Set the output columns to display.
+-v : Display verbose output.
+Usage example: To display information about all volume groups in the system, run the following command: vgs
+
+lvconvert - Convert a logical volume from one type to another
+Description: This command is used to convert a logical volume from one type to another in an LVM setup.
+Common flags:
+-v : Display verbose output.
+-t : Set the target type for the conversion.
+-r : Resize the file system on the logical volume after converting it.
+Usage example: To convert a logical volume named "mylv" in volume group "myvg" from type "linear" to type "thin", run the following command: lvconvert -t thin /dev/myvg/mylv
+
+lvresize - Resize, change the size of a logical volume
+Description: This command is used to resize a logical volume in an LVM setup.
+Common flags:
+-v : Display verbose output.
+-L : Set the new size of the logical volume.
+-r : Resize the file system on the logical volume after resizing it.
+Usage example: To resize a logical volume named "mylv" in volume group "myvg" to 50GB, run the following command: lvresize -L 50G /dev/myvg/mylv
+
+pvmove - Move extents from one physical volume to another
+Description: This command is used to move physical extents from one physical volume to another in an LVM setup.
+Common flags:
+-v : Display verbose output.
+-n : Set the name of the volume group to use.
+-i : Set the number of stripes to use for the move operation.
+Usage example: To move physical extents from physical volume "/dev/sdb1" to physical volume "/dev/sdc1" in volume group "myvg", run the following command: pvmove -n myvg /dev/sdb1 /dev/sdc1
+
+pvremove - Remove, delete a physical volume from an LVM setup
+Description: This command is used to remove a physical volume from an LVM setup.
+Common flags:
+-v : Display verbose output.
+-y : Assume yes to all questions.
+Usage example: To remove physical volume "/dev/sdb1" from the LVM setup, run the following command: pvremove /dev/sdb1
+
+lvmdiskscan - Scan disks for LVM volumes
+Description: This command is used to scan disks for LVM volumes in an LVM setup.
+Common flags:
+-v : Display verbose output.
+-c : Set the path to the configuration file.
+Usage example: To scan disks for LVM volumes in the system, run the following command: lvmdiskscan
+
+fdisk - Manipulate disk partition table
+Description: fdisk is a command-line utility that allows users to manipulate the partition table of a disk. It can be used to create, delete, and modify disk partitions, and can also be used to display information about the current partition table.
+Common flags:
+-l : lists the partition table of all available disks
+-u : changes the display units to sectors instead of cylinders
+-n : creates a new partition
+Usage example: sudo fdisk -l lists the partition table of all available disks.
+
+mysql - Command-line client for managing MySQL databases.
+Common flags:
+-u <username>: Connect to the database using the specified username.
+-p: Prompt for a password when connecting to the database.
+-e "<SQL query>": Execute the specified SQL query and exit.
+Usage example:
+mysql -u root -p -e "CREATE DATABASE mydb; USE mydb; CREATE TABLE mytable (id INT, name VARCHAR(20));"
+
+apache2 - Apache HTTP Server, a popular web server software.
+COmmon flags:
+-k start: Start the Apache HTTP Server.
+-k stop: Stop the Apache HTTP Server.
+-k restart: Restart the Apache HTTP Server.
+Usage example:
+sudo apache2 -k start
+
+
+nmcli - Command-line client for managing NetworkManager, which is used to control network interfaces and connections.
+Common flags:
+con show: Display a list of active connections.
+dev status: Display the status of network devices.
+con up <connection>: Activate the specified connection.
+Usage example:
+nmcli con show
+
+e2fsck - Check ext2/ext3/ext4 filesystem
+Description: This command is used to check an ext2, ext3, or ext4 file system for errors and inconsistencies. It is typically used during system boot or when the file system is not mounted.
+Common flags:
+-p : Automatically repair the file system without any questions (preen mode).
+-f : Force checking even if the file system seems clean.
+-v : Be verbose and display detailed information about the progress and results of the check.
+Usage example: To check and automatically repair an ext4 file system on the device /dev/sda1, run the following command: e2fsck -p /dev/sda1
+
+resize2fs - Resize an ext2/ext3/ext4 filesystem
+Description: This command is used to resize an ext2, ext3, or ext4 file system, allowing you to change the size of a mounted or unmounted file system.
+Common flags:
+-M : Shrink the file system to its minimum size.
+-P : Print an estimate of the smallest possible size of the file system.
+-f : Force the resize operation even if there are errors on the file system.
+Usage example: To resize the ext4 file system on the device /dev/sda1 to 20G, run the following command: resize2fs /dev/sda1 20G
+
+tune2fs - Adjust, change filesystem parameters on ext2/ext3/ext4 filesystems
+Description: This command is used to adjust various tunable file system parameters on ext2, ext3, or ext4 file systems.
+Common flags:
+-l : List the current file system parameters.
+-c : Set the maximum mount count before a file system check is forced.
+-i : Set the interval between file system checks.
+Usage example: To set the maximum mount count to 50 and the interval between checks to 30 days for the ext4 file system on device /dev/sda1, run the following command: tune2fs -c 50 -i 30d /dev/sda1
+
+dumpe2fs - Dump ext2/ext3/ext4 filesystem information
+Description: This command is used to display, show information about an ext2, ext3, or ext4 file system, such as its superblock, blocks, and inode information.
+Common flags:
+-h : Display only the superblock information.
+-f : Show the file system's features.
+-x : Show detailed information about the blocks and inodes.
+Usage example: To display the superblock information of an ext4 file system on the device /dev/sda1, run the following command: dumpe2fs -h /dev/sda1
+
+xfs_admin - Modify, change file system parameters
+Description: This command is used to change various parameters of an existing XFS file system, such as UUID and label.
+Common flags:
+-U : Set a new UUID for the file system.
+-L : Set a new label for the file system.
+Usage example: To change the label of the XFS file system on the device /dev/sda1 to "my_xfs_label", run the following command: xfs_admin -L "my_xfs_label" /dev/sda1
+
+xfs_growfs - Expand, grow an XFS filesystem
+Description: This command is used to resize an XFS file system, allowing you to grow the size of a mounted file system.
+Common flags:
+-d : Grow the file system to the maximum size supported by the device.
+-n : Display the geometry of the filesystem and exit.
+Usage example: To grow the XFS file system on the mounted device /dev/sda1 to the maximum size, run the following command: xfs_growfs -d /dev/sda1
+
+xfs_info - Display, show, see XFS filesystem geometry information
+Description: This command is used to display information about an XFS file system, such as block size, data blocks, real-time extents, and inodes.
+Usage example: To display information about the XFS file system on the mounted device /dev/sda1, run the following command: xfs_info /dev/sda1
+
+xfs_repair - Repair, fix an XFS filesystem
+Description: This command is used to repair an XFS file system. It should be run on an unmounted file system or in single-user mode.
+Common flags:
+-L : Force a zero log and attempt to repair the file system.
+-n : Perform a no-modify (read-only) check of the file system.
+Usage example: To repair the XFS file system on the device /dev/sda1, run the following command: xfs_repair /dev/sda1
+
+xfs_metadump - Copy XFS filesystem metadata to a file
+Description: This command is used to copy the metadata of an XFS file system to a file. It can be useful for debugging purposes or when working with XFS developers to diagnose issues.
+Common flags:
+-g : Dump only the superblock and the AG headers.
+-w : Dump only the metadata with non-zero length.
+Usage example: To create a metadata dump of the XFS file system on the device /dev/sda1, run the following command: xfs_metadump /dev/sda1 metadata_dump.img
+
+xfs_copy - Copy the contents of an XFS filesystem
+Description: This command is used to create a bitwise copy of an XFS file system to one or more target devices or files. It copies both data and metadata and can be used for backups or cloning purposes.
+Usage example: To create a copy of the XFS file system on the device /dev/sda1 to the device /dev/sdb1, run the following command: xfs_copy /dev/sda1 /dev/sdb1
+
+xfs_db - Debug an XFS filesystem
+Description: This command is used to examine, debug, and repair an XFS file system. It provides an interactive shell with a variety of commands for working with the file system's metadata structures.
+Common flags:
+-c : Run the specified command and exit.
+-r : Open the file system in read-only mode.
+Usage example: To open the XFS file system on the device /dev/sda1 in an interactive debug shell, run the following command: xfs_db /dev/sda1
+
+ulimit - Set or display resource limits
+Description: This command is used to set or display resource limits for the current shell and its child processes. Resource limits can be set to control the consumption of system resources like memory, CPU time, and file descriptors.
+Common flags:
+-a : Display all current resource limits.
+-n : Display or set the maximum number of open file descriptors.
+-u : Display or set the maximum number of processes available to a single user.
+Usage example:
+To set the maximum number of open file descriptors to 4096, run the following command: ulimit -n 4096
+Keep in mind that changes made with ulimit affect only the current shell session and its child processes. To set system-wide resource limits, you need to edit the appropriate configuration files, such as /etc/security/limits.conf or /etc/systemd/system.conf, depending on your Linux distribution and configuration.
+
+iostat - Report input/output statistics
+Description: This command is used to display input/output (I/O) statistics for devices, partitions, and CPU usage.
+Common flags:
+-c : Display only the CPU utilization report.
+-d : Display only the device utilization report.
+-x : Display extended statistics, providing more detailed information about device utilization.
+Usage example: To display an extended I/O report with a 5-second interval between updates, run the following command: iostat -x 5
+
+ioping - Monitor I/O latency in real-time
+Description: This command is used to monitor disk I/O latency by sending requests to a specified target (directory, file, or device) and measuring the time it takes for the requests to be completed.
+Common flags:
+-c : Specify the number of requests to send (default is infinite).
+-i : Set the interval between requests in seconds (default is 1 second).
+-s : Set the request size in bytes (default is 4 KiB).
+Usage example: To send 10 requests with a 2-second interval between them to the /tmp directory, run the following command: ioping -c 10 -i 2 /tmp
+
+quotacheck - Scan a file system for disk usage and create/update quota files
+Description: This command is used to examine and build quota information for a file system. It scans the file system, calculates the disk usage for each user and/or group, and updates the quota files accordingly.
+Common flags:
+-a : Check all mounted file systems with quota support.
+-u : Check user quotas (default if neither -u nor -g is specified).
+-g : Check group quotas.
+Usage example: To check user quotas for all mounted file systems with quota support, run the following command: quotacheck -au
+
+edquota - Edit user or group quota limits
+Description: This command is used to edit the quota limits for a specific user or group. It opens the quota limits in a text editor, allowing you to modify the values as needed.
+Common flags:
+-u : Edit user quotas (default if neither -u nor -g is specified).
+-g : Edit group quotas.
+-p : Copy the quota settings from the specified user or group to another user or group.
+Usage example: To edit the quota limits for user "johndoe", run the following command: edquota -u johndoe
+
+setquota - Set disk quota limits
+Description: This command is used to set or modify the disk quota limits for a specific user or group. It provides a way to set quota limits directly from the command line without using an editor, like in the case of edquota.
+Common flags:
+-u : Set user quotas (default if neither -u nor -g is specified).
+-g : Set group quotas.
+-a : Set quotas for all file systems listed in /etc/mtab.
+Usage example: To set a user quota for user "johndoe" with a block soft limit of 10000, block hard limit of 15000, inode soft limit of 2000, and inode hard limit of 3000 on the file system /dev/sda1, run the following command: setquota -u johndoe 10000 15000 2000 3000 /dev/sda1
+
+repquota - Generate a summary of disk usage and quotas
+Description: This command is used to display a summary of disk usage and quotas for users or groups on a specified file system. It provides an overview of the current quota usage, helping system administrators monitor and manage resource allocation.
+Common flags:
+-a : Generate a report for all mounted file systems with quota support.
+-u : Generate a report for user quotas (default if neither -u nor -g is specified).
+-g : Generate a report for group quotas.
+Usage example: To generate a user quota report for all mounted file systems with quota support, run the following command: repquota -au
+
+quota - Display disk usage and limits
+Description: This command is used to display the current disk usage and quota limits for a specific user or the current user if no user is specified. It provides an easy way to check the amount of space used and the remaining quota for the user.
+Common flags:
+-u : Show user quotas (default if neither -u nor -g is specified).
+-g : Show group quotas.
+Usage example: To display the disk usage and quota limits for user "johndoe", run the following command: quota -u johndoe
+
+warnquota - Send warnings to users or groups over disk quota limits
+Description: This command is used to send email warnings to users or groups that have exceeded their disk quota limits. It is typically run as a daily or weekly cron job to notify users or groups when they are over their allocated resources.
+Common flags:
+-a : Send warnings to all users or groups over their quota limits.
+-g : Send warnings to groups instead of users.
+Usage example: To send warnings to all users over their quota limits, run the following command: warnquota -a
+
+quotaon - Enable disk quotas for a file system
+Description: This command is used to enable disk quotas for a specified file system. It activates user and/or group quotas, allowing the system to enforce the set limits on disk usage.
+Common flags:
+-a : Enable quotas for all file systems listed in /etc/fstab with quota support.
+-u : Enable user quotas (default if neither -u nor -g is specified).
+-g : Enable group quotas.
+Usage example: To enable both user and group quotas for the file system /dev/sda1, run the following command: quotaon -ug /dev/sda1
+
+mdadm - Manage and monitor software RAID devices
+Description: This command is used to create, manage, and monitor software RAID devices (md devices) on Linux. It provides a versatile tool for working with RAID arrays and their components.
+Common flags:
+-C : Create a new RAID array with the specified devices.
+-D : Display detailed information about an existing RAID array.
+-A : Assemble a previously created RAID array from its components.
+-G : Grow or reshape an existing RAID array.
+-S : Deactivate an existing RAID array, releasing its components.
+Usage example: To create a RAID 5 array with devices /dev/sdb, /dev/sdc, and /dev/sdd, and assign it to /dev/md0, run the following command: mdadm --create /dev/md0 --level=5 --raid-devices=3 /dev/sdb /dev/sdc /dev/sdd
+
+chsh - Change login shell
+Description: This command is used to change the login shell of a user account. The change is made in the /etc/passwd file.
+Common flags:
+-s : Specify the shell for the user.
+-l : List available shells.
+Usage example: To change the default shell to /bin/zsh for the current user, run the following command: chsh -s /bin/zsh
+
+sync - Synchronize cached writes to persistent storage
+Description: The sync command flushes all file system buffers, sending all unsaved data to the disk.
+Common flags:
+There are no common flags used with sync as it typically is used standalone.
+Usage example: To ensure all unsaved data is written to disk, run the following command: sync
+
+unlink - Remove file
+Description: This command is used to remove the specified file by unlinking the filename.
+Common flags:
+-f : Do not prompt for confirmation before removing each existing destination file.
+Usage example: To remove a file named "example.txt", run the following command: unlink example.txt
+
+lsmod - List the status of loaded modules
+Description: This command is used to display the status of modules in the Linux Kernel.
+Common flags:
+-n : Do not show the version of the module.
+-V : Show the version of the program.
+-h : Display help message and exit.
+Usage example: To view the status of all the currently loaded modules, you would simply run the following command: lsmod
+
+modinfo - Show information about a Linux Kernel module
+Description: This command is used to display information about a Kernel module.
+Common flags:
+-a : Include all information.
+-F : Show specific field.
+-0 : Use \0 as the separator instead of newline for field values.
+Usage example: To display information about a specific kernel module, for example "ext4", run the following command: modinfo ext4
+
+insmod - Insert module into the Linux Kernel
+Description: This command is used to load or insert a module into the Linux Kernel.
+Common flags:
+-f : Force to load the module.
+-k : Make module autoclean-able.
+-m : Generate autoload file.
+Usage example: To load a module named "my_module", you would run the following command: insmod my_module
+
+rmmod - Remove a module from the Linux Kernel
+Description: This command is used to unload a module from the Linux Kernel.
+Common flags:
+-f : Force the removal of the module.
+-w : Wait until the module is no longer used.
+-s : Report removal to klogd.
+Usage example: To unload a module named "my_module", you would run the following command: rmmod my_module
+
+modprobe - Add or remove modules from the Linux Kernel
+Description: This command is used to add or remove modules from the Linux Kernel.
+Common flags:
+-a : Insert all modules matching the given names.
+-r : Remove a module (the opposite of loading a module).
+-v : Show verbose output.
+Usage example: To load a module named "my_module", you would run the following command: modprobe my_module
+
+depmod - Generate modules dependencies
+Description: This command is used to generate a list of module dependencies.
+Common flags:
+-a : Process all modules.
+-v : Print version and exit.
+-n : Dry run, print result on stdout.
+Usage example: To process all modules, you would run the following command: depmod -a
+
+sysctl - View and change kernel parameters at runtime
+Description: This command is used to view and change the currently active kernel parameters.
+Common flags:
+-a : Show all values.
+-w : Write a new value to the kernel parameter.
+-p : Load settings from a specific configuration file.
+Usage example: To display the value of the kernel parameter "vm.swappiness", you would run the following command: sysctl vm.swappiness
+
+dmesg - Print or control the kernel ring buffer
+Description: This command is used to display the message buffer of the kernel. The output of this command typically includes the messages produced by the device drivers.
+Common flags:
+-C : Clear the ring buffer.
+-w : Wait for new messages.
+-T : Show human readable timestamps.
+Usage example: To view the kernel messages with human readable timestamps, run the following command: dmesg -T
+
+dracut - Create an initial image for preloading modules
+Description: This command is used to create an initial RAM disk (initramfs) image. This image is loaded at boot time and contains everything the system needs to boot before the actual root filesystem is mounted.
+Common flags:
+-f : Overwrite existing initramfs file.
+-v : Increase verbosity or output level.
+-H : Host-only mode to create a smaller, host-specific initramfs.
+Usage example: To create a new initramfs image for the currently running kernel, you would run the following command: dracut -f
+Just as a note, the specific parameters and behavior of dracut can vary depending on the distribution and the specific version of dracut you're using. Always check the man page (man dracut) or other relevant documentation for your specific circumstances.
+
+mkinitrd - Create an initial ramdisk image for preloading modules
+Description: This command is used to create an initial image for preloading the necessary modules at boot time.
+Common flags:
+-f : Force overwrite of any existing initrd file.
+-v : Verbose output.
+-k : Specify the kernel version for which the initrd is being created.
+Usage example: To create an initial ramdisk for kernel version 5.12.0-1-amd64, you would run the following command: mkinitrd -f -v /boot/initrd-$(uname -r).img $(uname -r)
+Please note that the command syntax, options, and default behavior can vary somewhat between Linux distributions. Always check the man page (man mkinitrd) or other documentation specific to your distribution for the most accurate information.
+
+grub-mkconfig - Generate a GRUB configuration file
+Description: This command is used to generate a GRUB 2 configuration file. This file is often located in /boot/grub/grub.cfg, and should not be edited directly.
+Common flags:
+-o : Output the configuration to a specific file. It should be followed by the desired location and file name.
+-c : The configuration file location to use as input.
+Usage example: To generate a new GRUB configuration file in the standard location, run the following command: sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+grub-install - Install GRUB to a device
+Description: This command is used to install GRUB on a specific device. It's often used when repairing a boot loader or after installing a new operating system.
+Common flags:
+--recheck : This flag makes grub-install recheck the device map even if it already exists.
+--no-floppy : Prevents probing of any floppy devices.
+--target : Specifies the format of the install target.
+Usage example: To install GRUB on a device, typically a hard disk or partition (e.g., /dev/sda), run the following command: sudo grub-install /dev/sda
+
+grub-reboot - Set the default boot entry for GRUB for the next boot only
+Description: This command is used to set the default boot entry for the next boot only. After that boot, GRUB will revert to the entry specified in its settings file.
+Common flags:
+There are no common flags for this command. It only takes the entry number or name as an argument.
+Usage example: To set the next boot to use the second entry in the GRUB menu (GRUB uses 0-based counting, so the first entry is 0, the second is 1, etc.), run the following command: sudo grub-reboot 1
+
+hostnamectl - Control the system hostname
+Description: This command is used to view and change the system hostname. It can display the current settings, or set a new static (persistent) hostname, transient (temporary) hostname, or pretty (user-friendly) hostname.
+Common flags:
+static : Set the static (persistent) hostname.
+transient : Set the transient (temporary) hostname.
+pretty : Set the pretty (user-friendly and not used in network communications) hostname.
+Usage example: To set the system's static hostname to 'myhostname', run the following command: hostnamectl set-hostname myhostname --static
+
+telinit - Change SysV runlevel
+Description: This command is used to change the SysV runlevel, which is a mode that defines what services or processes should be running on the system. It is essentially a wrapper to the init command and mostly used in SysVinit system, less often in systems with systemd.
+Common flags:
+0 : Shut down and power off the system.
+1, s, or S : Set the system to single-user mode.
+2-5 : Set the system to multi-user mode.
+6 : Reboot the system.
+Q or q : Reload the /etc/inittab file.
+Usage example: To change the runlevel to single-user mode, run the following command: telinit 1
+
+chkconfig - Updates and queries runlevel information for system services
+Description: This command is used to setup, view, or change services that are started during the system boot process. It is used in System V init systems to manage services' symbolic links in the /etc/rc[0-6].d directories.
+Common flags:
+--list : List all services and their current start-up information.
+--add : Add a service for management by chkconfig.
+--del : Remove a service from chkconfig management.
+<number> : Sets the runlevel for the service. For example, "chkconfig --level 3 <service> on" sets the service to start at runlevel 3.
+Usage example: To list the start-up information for all services, run the following command: chkconfig --list
+
+pgrep - Look up processes based on name and other attributes
+Description: This command is used to find processes by their name, user owner, group owner, terminal, or other attributes. It returns the process IDs that match the criteria.
+Common flags:
+-u : Only match processes owned by the given user.
+-g : Only match processes in the given process group.
+-n : Select only the newest (most recently started) of the matching processes.
+-l : Long output format which includes both the PID and the process name.
+Usage example: To find the process ID of the process named "bash", run the following command: pgrep bash
+
+egrep - Print lines matching a pattern using extended regular expressions
+Description: This command is used to search files for lines that match an extended regular expression and print the results. It's similar to 'grep -E' and is functionally the same as 'grep' when using the '-E' flag.
+Common flags:
+-i : Ignore case distinctions in both the pattern and the input files.
+-v : Invert the sense of matching, to select non-matching lines.
+-r or -R : Recursively search directories.
+-l : Only print the names of files with matching lines, separated by newline characters. Doesn't repeat the names of files when the pattern is found more than once.
+Usage example: To search for the lines that contain either 'error' or 'warning' in a file named 'logfile.log', run the following command: egrep 'error|warning' logfile.log
+
+pidof - Find the process ID of a running program
+Description: This command is used to find the process IDs of a running program. It is similar to pgrep, but typically only returns the PID.
+Common flags:
+-s : Return only the first PID found, which is useful when multiple instances of a program are running.
+-x : Also return PIDs for scripts.
+Usage example: To find the process ID of the running program "bash", run the following command: pidof bash
+
+htop - Interactive process viewer
+Description: This command is an interactive process viewer, providing a real-time, dynamic view to monitor a Linux system. It provides a more human-friendly interface than 'top', and allows you to scroll vertically and horizontally to see all processes and full command lines.
+Common flags:
+-u : Show only the processes of a specific user.
+-p : Monitor only processes with given process IDs.
+-d : Set the delay between updates, in tenths of seconds.
+Usage example: To show only the processes of user "john", run the following command: htop -u john
+
+systemd-analyze - Analyze and debug system manager
+Description: This command is used to analyze and troubleshoot system performance and start-up issues related to systemd, the system and service manager. It can provide detailed timing information about the boot process, among other things.
+Common flags:
+blame : Presents a list of all units sorted by the time they took to initialize.
+critical-chain : Displays a tree of the time-critical chain of units (the path through services whose startup determines the total boot time).
+plot : Outputs an SVG plot to standard output with a graphical overview of the boot process.
+Usage example: To see which unit files are slowing down boot time, run the following command: systemd-analyze blame
+
+renice - Alter priority of running processes
+Description: This command is used to change the scheduling priority of one or more running processes. A process's priority value is a number from -20 (highest priority) to 19 (lowest priority).
+Common flags:
+-n : The new nice value for the process.
+-u : Signifies that the following argument is a username whose processes should be reniced.
+-g : Signifies that the following argument is a process group ID whose processes should be reniced.
+Usage example: To change the priority of all processes owned by the user "john" to a nice value of 10, run the following command: renice -n 10 -u john
+
+nice - Run a program with modified scheduling priority
+Description: This command is used to start a process with an adjusted niceness value, which affects the process's scheduling priority. Niceness values range from -20 (most favorable to the process) to 19 (least favorable to the process).
+Common flags:
+There are no specific flags for nice, but it takes a niceness value as an argument (with a default value of 10).
+Usage example: To start the program "myprogram" with a nice value of 5, run the following command: nice -n 5 myprogram
+
+fg - Move job to the foreground
+Description: This command is used to continue a stopped job by running it in the foreground. It operates within the context of job control in the bash and other Unix-like shells, where it's possible to pause jobs and move them between the foreground and background.
+Common flags:
+There are no specific flags for fg, but it takes a job ID (prefixed by %) as an argument.
+Usage example: To bring a job with the job ID 1 to the foreground, run the following command: fg %1
+
+nohup - Run a command immune to hangups
+Description: This command is used to run a process or job that continues running even after the user has logged out or the terminal session has ended. The output of the process, if any, is saved to a file called nohup.out in the current directory.
+Common flags:
+There are no specific flags for nohup, but it takes as an argument the command you wish to run.
+Usage example: To run a long-running script called long_script.sh that continues even after logging out, run the following command: nohup ./long_script.sh &
+
+pkill - Signal processes based on name and other attributes
+Description: This command is used to send a signal to processes, often used to terminate them, based on their names or other attributes such as process owner.
+Common flags:
+-u : Only match processes owned by the given user.
+-n : Select only the newest (most recently started) of the matching processes.
+-o : Select only the oldest (least recently started) of the matching processes.
+-signal : The signal to send (defaults to SIGTERM if not specified).
+Usage example: To send a termination signal (SIGTERM) to processes named "bash", run the following command: pkill bash
+
+killall - Kill processes by name
+Description: This command is used to terminate all processes that have a specific name. This is helpful when you want to stop all instances of a particular program.
+Common flags:
+-i : Interactive mode. Ask for confirmation before killing each process.
+-e : Require an exact match for the process name.
+-I : Ignore case distinctions when matching process names.
+-signal : The signal to send (defaults to SIGTERM if not specified).
+Usage example: To send a termination signal (SIGTERM) to all processes named "bash", run the following command: killall bash
+
+
+uptime - Display how long the system has been running
+Description: This command shows the current time, how long the system has been running, how many users are currently logged on, and the system load averages for the past 1, 5, and 15 minutes.
+Common flags:
+-p : Pretty format that shows uptime in a more readable format in terms of years, months, days, hours and minutes.
+-s : Since format that shows when the system has been up since in YYYY-MM-DD HH:MM:SS format.
+Usage example: To display the system uptime, run the following command: uptime
+
+sar - System Activity Report
+Description: This command is used to collect, report, and save system activity information.
+Common flags:
+-u : Report CPU utilization.
+-r : Report memory utilization.
+-b : Report I/O and transfer rate statistics.
+Usage example: To create a report on CPU utilization, run the following command: sar -u
+
+free - Display amount of free and used memory in the system
+Description: This command provides information about unused and used memory and swap space on your system, as well as the buffers and caches used by the kernel.
+Common flags:
+-h : Display the result in human-readable format (e.g., KB, MB).
+-t : Display a line containing the totals.
+Usage example: To display the memory usage in a human-readable format, run the following command: free -h
+
+lsmem - Display memory block (DIMM) information
+Description: This command shows the layout of the memory in the system including size, node, and more.
+Common flags:
+-o : Output format, supporting different units (B, KB, MB, GB, etc.).
+-P : Display output in parseable format.
+Usage example: To display the memory block information, run the following command: lsmem
+
+vmstat - Report virtual memory statistics
+Description: This command provides information about processes, memory, paging, block IO, traps, and cpu activity.
+Common flags:
+-a : Display active and inactive memory.
+-w : Wide output – don't truncate fields.
+-n : Run vmstat in continuous mode, displaying new results every n seconds.
+Usage example: To display virtual memory statistics every 2 seconds, run the following command: vmstat 2
+
+swapon - Enable devices and files for paging and swapping
+Description: This command is used to specify devices on which paging and swapping are to take place.
+Common flags:
+-s : Display swap usage summary by device.
+-a : Enable all devices marked as 'swap' in /etc/fstab.
+Usage example: To display swap usage summary, run the following command: swapon -s
+
+swapoff - Disable devices and files for paging and swapping
+Description: This command is used to disable devices and files that were previously enabled for paging and swapping.
+Common flags:
+-a : Disable all devices and files marked as 'swap' in /etc/fstab.
+Usage example: To disable all swap devices, run the following command: sudo swapoff -a
+
+udevadm - Device Manager for the Linux kernel
+Description: This command is used to manage devices in /dev, especially useful when debugging problems related to these devices.
+Common flags:
+info : Query sysfs or the udev database for device information.
+monitor : Listen to the kernel events sent out during a boot or a change in the sysfs.
+trigger : Request device events from the kernel.
+test : Test an event run.
+Usage example: To display device information for /dev/sda, run the following command: udevadm info --query=all --name=/dev/sda
+
+lpr - Print files
+Description: This command is used to print files. It submits print requests to the line printer daemon, which queues the files for printing.
+Common flags:
+-P : Specifies the destination printer.
+-# : Specifies the number of copies to print.
+-o : Specifies options to be used when printing the file, such as landscape or duplex.
+Usage example: To print 2 copies of a file named "file.txt" to a printer named "printer1", run the following command: lpr -P printer1 -# 2 file.txt
+
+lshw - List Hardware
+Description: This command is used to report detailed and brief information about multiple hardware like CPU architecture, memory, disk, network, graphics cards, etc.
+Common flags:
+-C : Only displays the information about the given class.
+-short : Displays the information in a compact format.
+-numeric : Displays numeric IDs.
+Usage example: To display information about the network class in a compact format, run the following command: lshw -C network -short
+
+hwinfo - Hardware Info
+Description: This command is used to probe for the hardware present in the system. It can report exact memory configuration, firmware version, mainboard configuration, CPU version and speed, cache configuration, bus speed, etc.
+Common flags:
+--short : Provides a short listing of devices.
+--cpu : Gives information about the CPU.
+--disk : Gives information about disk drives.
+Usage example: To get a short list of disk drives present in the system, run the following command: hwinfo --disk --short
+
+lspci - List PCI
+Description: This command is used to display detailed information about all PCI buses and devices in the system.
+Common flags:
+-v : Shows verbose output, displaying more detailed information about the PCI devices.
+-nn : Shows numeric output, displaying both the ID and the device name.
+-k : Shows the kernel drivers handling each device and also any kernel modules that might be available for the device.
+Usage example: To display verbose information about all PCI devices, run the following command: lspci -v
+
+lsusb - List USB
+Description: This command is used to display detailed information about USB buses and the devices connected to them.
+Common flags:
+-v : Shows verbose output, displaying more detailed information about the USB devices.
+-s : Shows information about a specific bus and device.
+-t : Shows the physical USB device hierarchy as a tree.
+Usage example: To display detailed information about all USB devices, run the following command: lsusb -v
+
+lpq - Printer Queue
+Description: This command is used to display the status of available print jobs.
+Common flags:
+-l : Shows a long listing of print jobs, giving more detailed information.
+-P : Specifies a particular printer.
+-p : Shows the ranks of the print jobs.
+Usage example: To display the status of all print jobs on a particular printer "printer1", run the following command: lpq -P printer1
+
+lprm - Remove Print Jobs
+Description: This command is used to cancel print jobs that have been queued for printing.
+Common flags:
+-P : Specifies a particular printer.
+Usage example: To cancel all print jobs on a particular printer "printer1", run the following command: lprm -P printer1 -
+
+nmtui - Network Manager Text User Interface
+Description: This command provides a simple text interface to NetworkManager, which is used to view, establish, and manage network connections.
+Common flags:
+(None): This command typically opens a text user interface without the need for flags.
+Usage example: To manage network connections, run the following command: nmtui
+
+ethtool - Ethernet Tool
+Description: This utility is used to display and change the settings of your network interface card (NIC). It's mainly used to troubleshoot ethernet cards.
+Common flags:
+-g : Queries ethernet device for rx/tx ring parameter information.
+-i : Shows identification information of the ethernet device.
+-s : Allows you to change some or all settings of the specified ethernet device.
+Usage example: To display identification information for an ethernet device, say eth0, run the following command: ethtool -i eth0
+
+dig - Domain Information Groper
+Description: This is a flexible tool for interrogating DNS name servers. It performs DNS lookups and displays the answers that are returned from the name server(s) that were queried.
+Common flags:
++short : Provides a shorter answer. This can be helpful if you only want to see the IP address or result, not the entire output.
+-x : Used for a reverse DNS lookup, converting an IP address to a hostname.
+-t : Can be used to specify the type of record you want to query, such as A (the default), MX, TXT, etc.
+Usage example: To perform a DNS lookup for "example.com" and only display the IP address, run the following command: dig +short example.com
+
+virsh - Virtualization Interactive Shell
+Description: This is a command-line interface tool for managing guest systems created with QEMU/KVM hypervisor technology, part of the libvirt library. You can create, pause, and shutdown domains (i.e., operating systems or virtual machines) using this tool.
+Common flags:
+list : Lists all running domains.
+start [domain] : Starts a specified inactive domain.
+shutdown [domain] : Gracefully shuts down a specified active domain.
+destroy [domain] : Forces the shutdown of a specified active domain (equivalent to pulling the power plug).
+Usage example: To list all running domains, run the following command: virsh list
+
+nload - Network Load Monitor
+Description: This is a command-line tool that allows users to monitor the incoming and outgoing traffic separately. It also provides additional information like min/max network usage, total data transferred, etc.
+Common flags:
+-u : Changes the unit in which the current bandwidth is displayed.
+-t : Changes the refresh interval of the display, in milliseconds.
+-i : Sets an upper limit for the graph of the incoming bandwidth.
+Usage example: To monitor network traffic with a refresh interval of 500 milliseconds, run the following command: nload -t 500
+
+ss - Socket Statistics
+Description: ss is a utility to investigate sockets. It can dump socket statistics, showing information similar to netstat. It can display more TCP and state information than other tools.
+Common flags:
+-t : Shows TCP sockets.
+-u : Shows UDP sockets.
+-l : Shows listening sockets.
+-p : Shows process using the sockets.
+Usage example: To display all TCP sockets along with process information, run the following command: ss -tp
+
+host - DNS Lookup Utility
+Description: The host command is a simple utility for performing DNS lookups in Linux. It is used to convert names to IP addresses and vice versa.
+Common flags:
+-t : Allows you to specify the type of the query (A, AAAA, MX, NS, etc.).
+-a : Lists all information of a domain.
+-v : Displays verbose output.
+Usage example: To perform a verbose DNS lookup of "example.com", run the following command: host -v example.com
+
+nslookup - Network Administration Command-Line Tool
+Description: nslookup is a network administration tool for querying the Domain Name System (DNS) to obtain domain name or IP address mapping, or other DNS records.
+Common flags:
+-type : Specifies the type of DNS record to be queried.
+-debug : Prints debugging information.
+-query : Specifies a new query type.
+Usage example: To lookup the IP address for "example.com", run the following command: nslookup example.com
+
+arp - Address Resolution Protocol
+Description: This command is used to manipulate or display the kernel's IPv4 network neighbor cache.
+Common flags:
+-a : Displays the ARP entries by scanning the current network.
+-d : Deletes an entry.
+-s : Manually creates an ARP entry.
+Usage example: To display the ARP entries, run the following command: arp -a
+
+traceroute - Trace Route to Destination
+Description: This command is used to show the route that packets take to get to a network host.
+Common flags:
+-n : Do not resolve IP addresses to their domain names.
+-I : Use ICMP ECHO for probes.
+Usage example: To traceroute to "example.com", run the following command: traceroute example.com
+
+tracepath - Trace Path to Destination
+Description: This command traces path to a network host discovering MTU along this path. It uses the UDP port or the ICMP protocol to do this.
+Common flags:
+-n : Do not resolve IP addresses to their domain names.
+-l : Specifies the initial link layer payload length.
+Usage example: To tracepath to "example.com", run the following command: tracepath example.com
+
+netcat (nc) - Networking Utility
+Description: This is a networking utility for reading from and writing to network connections using TCP or UDP.
+Common flags:
+-l : Used to specify that netcat should listen for an incoming connection rather than initiate a connection to a remote host.
+-u : Use UDP instead of the default option of TCP.
+-p : Specifies the source port netcat should use.
+Usage example: To setup a simple server listening on port 12345, run the following command: nc -l 12345
+
+tcpdump - Network Traffic Analyzer
+Description: This command-line utility displays TCP/IP and other packets being transmitted or received over a network.
+Common flags:
+-i : Specifies the interface to capture packets.
+-w : Write raw packets to a file.
+-r : Read packets from a file.
+Usage example: To capture packets on interface eth0 and write them into a file, run the following command: tcpdump -i eth0 -w output.pcap
+
+route - Show / Manipulate IP Routing Table
+Description: This command displays and modifies the IP routing table.
+Common flags:
+-n : Displays numerical addresses instead of trying to determine symbolic host names.
+-e : Displays the netmask for each route in the routing table.
+Usage example: To display the kernel routing table, run the following command: route -n
+
+iftop - Network Traffic Monitor
+Description: This command listens to network traffic on a named interface and displays a table of current bandwidth usage by pairs of hosts.
+Common flags:
+-n : Do not resolve host addresses.
+-N : Do not resolve port numbers.
+-p : Run in promiscuous mode (show all packets on the network).
+Usage example: To monitor network traffic on interface eth0, run the following command: iftop -nNp -i eth0
+
+iperf - Network Performance Measurement Tool
+Description: This tool measures the bandwidth performance by creating TCP and UDP data streams.
+Common flags:
+-s : Run in server mode.
+-c : Run in client mode. Requires the server's hostname or IP.
+-p : Specifies the server port to connect to or the port to listen on.
+Usage example: To start an iperf server on port 5001, run the following command: iperf -s -p 5001
+
+mtr - Network Diagnostic Tool
+Description: This is a network diagnostic tool that combines the functionality of the 'traceroute' and 'ping' programs in a single network diagnostic tool.
+Common flags:
+-n : Display network route numbers instead of hostnames.
+-r : Generate a report.
+-c : Set the number of pings sent to determine both the machines on the network and the reliability of those machines.
+Usage example: To run mtr to a specific host, run the following command: mtr -nrc 5 example.com
+
+dpkg - Debian Package Management System
+Description: dpkg is a tool to install, build, remove, and manage Debian packages. The primary and more user-friendly front-end for dpkg is aptitude(1).
+Common flags:
+-i : Installs a package.
+-r : Removes an installed package.
+-l : Lists installed packages.
+Usage example: To install a package file named "example.deb", run the following command: dpkg -i example.deb
+
+dnf - Dandified YUM, a package manager for RPM-based Linux distributions
+Description: dnf is the next-generation replacement for yum, the package manager for RPM-based distributions of Linux.
+Common flags:
+install : Installs a package.
+remove : Removes a package.
+upgrade : Upgrades a package.
+Usage example: To install a package named "example", run the following command: dnf install example
+
+rpm - RPM Package Manager
+Description: rpm is a powerful Package Manager, which can be used to build, install, query, verify, update, and erase individual software packages.
+Common flags:
+-i : Installs a package.
+-e : Erases a package.
+-q : Queries a package.
+Usage example: To install a package file named "example.rpm", run the following command: rpm -i example.rpm
+
+semanage - SELinux Policy Management tool
+Description: semanage is used to configure certain elements of SELinux policy without requiring modification to or recompilation from policy sources.
+Common flags:
+-fcontext : Used to manage file context mapping definitions.
+-port : Used to manage network port type definitions.
+-boolean : Used to manage boolean values.
+Usage example: To add a new port type definition, run the following command: semanage port -a -t http_port_t -p tcp 8080
+
+sestatus - SELinux Status tool
+Description: sestatus is a utility that provides a brief overview of the various aspects of the current SELinux system.
+Common flags:
+(None): This command typically does not require flags.
+Usage example: To view the status of SELinux, run the following command: sestatus
+
+getenforce - Get SELinux mode
+Description: This command is used to view the current mode of SELinux (Enforcing, Permissive, or Disabled).
+Common flags:
+(None): This command typically does not require flags.
+Usage example: To get the current SELinux mode, run the following command: getenforce
+
+setenforce - Change SELinux mode
+Description: setenforce changes the mode of SELinux without requiring a reboot.
+Common flags:
+0 : Set SELinux to Permissive mode.
+1 : Set SELinux to Enforcing mode.
+Usage example: To set SELinux to Permissive mode, run the following command: setenforce 0
+
+getsebool - Get SELinux boolean value
+Description: getsebool command is used to display the current SELinux boolean values.
+Common flags:
+-a : Display all SELinux boolean values.
+Usage example: To get all current SELinux boolean values, run the following command: getsebool -a
+
+setsebool - Set SELinux boolean value
+Description: setsebool changes the value of a SELinux boolean.
+Common flags:
+-P : Make the change permanent.
+Usage example: To permanently enable the 'httpd_can_network_connect' boolean, run the following command: setsebool -P httpd_can_network_connect on
+
+chcon - Change file SELinux security context
+Description: This command changes the SELinux context of a file.
+Common flags:
+-v : Show changes.
+-R : Operate on files and directories recursively.
+Usage example: To change the SELinux context of a file named "example.txt" to "httpd_sys_content_t", run the following command: chcon -v -t httpd_sys_content_t example.txt
+
+restorecon - Restore file(s) default SELinux security contexts.
+Description: This command can be used to restore file(s) default SELinux security contexts.
+Common flags:
+-v : Show changes.
+-R : Operate on files and directories recursively.
+Usage example: To restore the default SELinux context of a file named "example.txt", run the following command: restorecon -v example.txt
+
+sealert - SELinux Alert Browser
+Description: sealert is a tool that provides an interface for viewing SELinux AVC denial and policy violation alerts.
+Common flags:
+-l : Lists all alert identifiers.
+-a : Lists all alerts.
+Usage example: To view all alerts, run the following command: sealert -a /var/log/audit/audit.log
+
+audit2why - Interpret audit logs
+Description: This tool takes input from the audit.log file and attempts to provide an explanation for why the logged behavior was denied.
+Common flags:
+(None): This command typically does not require flags.
+Usage example: To interpret an audit log, run the following command: audit2why < /var/log/audit/audit.log
+
+audit2allow - Generate SELinux policy allow rules from logs
+Description: This command generates SELinux policy allow rules from logs of denied operations.
+Common flags:
+-M : Make a policy module.
+-l : Long format.
+Usage example: To generate policy allow rules from logs, run the following command: audit2allow -a
+
+semodule - Manage SELinux policy modules
+Description: This command is used to manage SELinux policy modules.
+Common flags:
+-i : Install a new module.
+-r : Remove a module.
+-l : List installed modules.
+Usage example: To list all installed SELinux modules, run the following command: semodule -l
+
+
+ssh-keygen - Authentication Key Generation
+Description: ssh-keygen is a tool that provides key generation, key conversion, and various kinds of public key finger-printing and screen-printing.
+Common flags:
+-t : Specifies the type of key to create.
+-b : Specifies the number of bits in the key.
+-C : Provides a new comment.
+Usage example: To generate a new RSA key pair with a bit size of 2048, run the following command: ssh-keygen -t rsa -b 2048
+
+ssh-copy-id - Install Public Key to a Remote Host
+Description: ssh-copy-id is a script that uses ssh to log into a remote machine and append the indicated identity file to that machine's ~/.ssh/authorized_keys.
+Common flags:
+-i : Indicates the identity file (public key) that you want to install.
+-p : Specifies the port on the remote machine.
+Usage example: To copy your public key to the remote host "example.com", run the following command: ssh-copy-id user@example.com
+
+ssh-add - Adds Private Key Identities
+Description: ssh-add adds private key identities to the authentication agent.
+Common flags:
+-l : Lists fingerprints of all identities currently represented by the agent.
+-D : Deletes all identities.
+-t : Sets a maximum lifetime for the identities added during this run.
+Usage example: To add a specific private key to the agent, run the following command: ssh-add ~/.ssh/id_rsa
+
+gcc - GNU Compiler Collection
+Description: gcc is a compiler system produced by the GNU Project supporting various programming languages.
+Common flags:
+-o : Determines the output file name.
+-g : Includes debugging information in the output.
+-Wall : Enables all compiler's warning messages.
+Usage example: To compile a file named "example.c" to an output file named "example", run the following command: gcc example.c -o example
+
+ldd - Print Shared Object Dependencies
+Description: ldd is a Unix utility that prints the shared libraries required by each program or shared library specified on the command line.
+Common flags:
+-v : Provides verbose output, including symbol versioning data.
+-u : Prints unused direct dependencies.
+Usage example: To find out which libraries the /bin/ls command needs, run the following command: ldd /bin/ls
+
+make - GNU make utility
+Description: make is a tool which controls the generation of executables and other non-source files of a program from the program's source files.
+Common flags:
+-f : Specifies an alternative makefile.
+-j : Specifies the number of jobs (commands) to run simultaneously.
+-C : Changes to the specified directory before reading the makefiles.
+Usage example: To compile a program using a makefile named "Makefile", run the following command: make -f Makefile
+
+kinit - Obtains and Caches Kerberos Ticket-Granting Tickets
+Description: kinit is used to obtain and cache Kerberos ticket-granting tickets.
+Common flags:
+-l : Specifies the lifetime of the ticket.
+-r : Specifies the renewable lifetime of the ticket.
+-f : Requests a forwardable ticket.
+Usage example: To get a Kerberos ticket for a user named "user", run the following command: kinit user
+
+kpassword - Change a user's Kerberos password
+Description: kpassword allows the user to change his Kerberos password.
+Common flags:
+(None): This command typically does not require flags.
+Usage example: To change the Kerberos password for a user, run the following command and follow the prompts: kpassword
+
+klist - Lists Kerberos Tickets
+Description: klist is used to list entries in credential cache and key tab.
+Common flags:
+-e : Shows the encryption types of the session key and the ticket for each credential.
+-f : Shows flags of the credentials, such as initial, pre-authenticated, and hardware authenticated.
+-a : Shows the address(es) in credentials.
+Usage example: To list Kerberos tickets, run the following command: klist
+
+kdestroy - Destroys Kerberos Tickets
+Description: kdestroy is used to destroy Kerberos credentials.
+Common flags:
+-q : Runs quietly.
+-c : Destroys the tickets in the specified credentials cache.
+Usage example: To destroy Kerberos tickets, run the following command: kdestroy
+
+shred - Overwrite a File to Hide its Contents
+Description: shred overwrites the specified files repeatedly, in order to make it harder for even very expensive hardware probing to recover the data.
+Common flags:
+-f : Changes the permissions to allow writing if necessary.
+-n : Overwrites N times instead of the default (3).
+-u : Truncates and removes the file after overwriting.
+Usage example: To securely delete a file named "example.txt", run the following command: shred -u example.txt
+
+cryptsetup - Utility to Setup Disk Encryption
+Description: cryptsetup is used to conveniently setup disk encryption based on the DMCrypt kernel module.
+Common flags:
+-v : Shows verbose output.
+-c : Specifies the cipher used.
+-s : Specifies the key size.
+Usage example: To create an encrypted container in a file, run the following command: cryptsetup -v -c aes-xts-plain64 -s 256 luksFormat /path/to/container
+isLuks - Checks whether a block device (or file) is a LUKS encrypted device.
+Usage example: cryptsetup isLuks /dev/sdb1
+luksOpen - Unlocks the LUKS device and creates a mapping that allows you to access the device's decrypted content. After a LUKS device is opened with this command, you can access its decrypted content at /dev/mapper/<name>.
+Usage example: cryptsetup luksOpen /dev/sdb1 my_encrypted_volume
+luksClose - Locks a LUKS device that was previously opened by luksOpen. This removes the mapping and makes the decrypted content inaccessible.
+Usage example: cryptsetup luksClose my_encrypted_volume
+luksAddKey - Adds a new passphrase to a LUKS device. Each LUKS device can have up to 8 different passphrases that can unlock it.
+Usage example: cryptsetup luksAddKey /dev/sdb1
+luksDelKey - Removes a passphrase from a LUKS device. You need to specify the passphrase to be deleted.
+Usage example: cryptsetup luksDelKey /dev/sdb1
+
+firewall-cmd
+Description: firewall-cmd is a command line client of the firewalld daemon, or firewalld, which provides a dynamically managed firewall with support for network/firewall zones. It defines the trust level of network connections or interfaces.
+Common flags/commands:
+firewall-cmd --state: Returns and prints the current state of the firewall.
+firewall-cmd --reload: Reloads the firewall configuration without breaking existing connections.
+firewall-cmd --get-default-zone: Returns the default zone used by firewalld.
+firewall-cmd --set-default-zone=zone: Changes the default zone.
+firewall-cmd --get-active-zones: Shows the currently active zones and their associated interfaces.
+firewall-cmd --zone=zone --add-service=service: Adds a service to a zone.
+firewall-cmd --zone=zone --remove-service=service: Removes a service from a zone.
+Usage example: To get the state of the firewall, run the following command: sudo firewall-cmd --state
+Please replace zone with the actual zone name (like public, dmz, etc.) and service with the actual service name (like http, https, ssh, etc.). You may require root privileges (sudo) to run these commands. Always be careful while changing firewall settings, as it can affect your system's security and network connectivity.
+
+env - Display environment variables
+Description: This command is used to display the environment variables. You can also use it to run a command in a custom environment.
+Common flags:
+-i : Starts with an empty environment.
+-u : Removes a variable from the environment.
+-0 : Output each entry separated by a null character instead of a newline.
+Usage example: To run a command mycommand with an empty environment, run the following command: env -i mycommand
+
+export - Export environment variables
+Description: This command is used to set an environment variable and make it available to subprocesses.
+Common flags:
+-n : Remove the export property from a variable.
+-p : List all the variables that are marked for export.
+-f : The names refer to functions.
+Usage example: To set the environment variable VAR and make it available to subprocesses, run the following command: export VAR=value
+
+set - Set or unset shell options
+Description: This command is used to set or unset values of shell options and positional parameters.
+Common flags:
+-o : Display current option settings.
+-e : Exit immediately if a pipeline, which is not in the list, returns a non-zero status.
+-f : Disable file name generation (globbing).
+Usage example: To set the shell option errexit, which causes the shell to exit if any invoked command fails, run the following command: set -o errexit
+
+alias - Define or display aliases
+Description: This command is used to create shortcuts for commands or define a string to be replaced by another string.
+Common flags:
+-p : Print the current list of defined aliases.
+-t : Tag the specified aliases for automatic export to the environment of subsequently executed commands.
+-u : Remove the specified names from the list of defined aliases.
+Usage example: To create a shortcut for the command ls -l, run the following command: alias ll='ls -l'
+
+git - Distributed version control system
+Description: This command is used to track changes in source code during software development. It enables multiple people to work on the same project at the same time.
+Common flags:
+-m : Use this flag to specify a commit message.
+-b : This flag is used to create a new branch.
+-a : This flag automatically stages all modified and deleted files.
+Usage example: To commit changes with a message, run the following command: git commit -m "Your commit message"
+
+podman - Manage pods, containers, and container images
+Description: This command is used to run, manage and maintain containers in a container environment.
+Common flags:
+-d : This flag is used to start a container in detached mode (in the background).
+-p : This flag is used to publish the container's port to the host.
+-i : This flag is used to run the container in interactive mode.
+Usage example: To run a container in detached mode from an image named "myimage", run the following command: podman run -d myimage
+
+docker - Build, ship, and run distributed applications
+Description: This command is used to create, deploy, and run applications by using containers.
+Common flags:
+-d : This flag is used to start a container in detached mode (in the background).
+-p : This flag is used to publish the container's port to the host.
+-i : This flag is used to run the container in interactive mode.
+Usage example: To run a container in detached mode from an image named "myimage", run the following command: docker run -d myimage
+
+snapd - Tool to work with snap packages
+Description: This command is used to install, configure, refresh and remove snap packages on a system.
+Common flags:
+-v : Display version information.
+--channel : Use this flag to install a snap from a specific channel.
+--list : List installed snaps.
+Usage example: To install a snap package named "mysnap", run the following command: sudo snap install mysnap
+
+>> - The >> command is used to redirect the output of a command to a file and append the output to the end of the file. For example, the command echo "Hello World" >> myfile.txt would append the text "Hello World" to the end of the file myfile.txt.
+
+< - The < command is used to redirect the input of a command from a file. For example, the command sort < myfile.txt would sort the contents of the file myfile.txt.
+
+<< - The << command is used to provide input to a command without having to create a separate file. It is called a "here-document" and allows you to specify multiple lines of input. For example, the command cat << EOF would allow you to enter multiple lines of input and terminate the input by typing EOF on a line by itself.
+
+> - The > command is used to redirect the output of a command to a file and overwrite the contents of the file. For example, the command echo "Hello World" > myfile.txt would write the text "Hello World" to the file myfile.txt and overwrite any existing contents.
+
+| - The | command is used to pipe the output of one command as input to another command. For example, the command ls -l | grep myfile.txt would list the contents of the current directory in long format and then filter the results to show only lines containing the text "myfile.txt".
+
+$ - The $ command is used to expand a shell variable or a command substitution. For example, the command echo $HOME would display the path to the current user's home directory.
+
+# - The # command is used to specify a comment in a shell script. Any text following the # symbol on a line is treated as a comment and ignored by the shell.
+
+& - The & command is used to run a command in the background. For example, the command sleep 60 & would run the sleep command in the background for 60 seconds, allowing you to continue using the shell while the command runs.
+
+&& - The && command is used to run a second command only if the first command is successful. If the first command exits with a status of zero (indicating success), the second command will be executed. If the first command exits with a non-zero status (indicating failure), the second command will not be executed. For example, the command make && make install would run the make command to compile a program, and if the compilation succeeds (exits with a status of zero), the make install command would be executed to install the program.
+
+|| - This operator is used in bash and other Unix shells. The command following || is executed only if the command preceding || fails (returns a non-zero status).
+Usage example: command1 || command2. In this example, command2 is only executed if command1 fails.
+
+; - This operator is used to separate multiple commands that are entered on a single command line. The commands are executed sequentially, regardless of the success or failure of the previous command.
+Usage example: command1 ; command2. Here, command2 is executed after command1 has finished, regardless of whether command1 was successful or not.
+
+{} - The curly braces {} are used for brace expansion in Linux. They are used to generate a series of strings based on a pattern. For example, the command mkdir {1..5} will create five directories named 1, 2, 3, 4, and 5.
+
+[] - The square brackets [] are used to define a range or a set of characters in Linux commands. They are used in commands such as ls and grep to match files or strings that match a specific pattern. For example, the command ls [abc]* will list all files in the current directory that start with the letters a, b, or c.
+
+* - The asterisk * is known as a wildcard character in Linux. It can be used to represent any number of characters in a filename or path. For example, the command ls *.txt will list all files in the current directory that end with the .txt extension.
+
+? - The question mark ? is also a wildcard character in Linux, but it represents a single character. For example, the command ls file?.txt will list all files in the current directory that have a filename consisting of the word file, followed by any single character, and ending with the .txt extension.
+
+
+
+
+
+
+

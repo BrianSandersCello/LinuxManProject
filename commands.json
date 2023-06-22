@@ -1,0 +1,116 @@
+{
+    "Navigation": {
+        "cd": "Change the current directory",
+        "ls": "List directory contents",
+        "pwd": "Print the name of the current working directory",
+        "tree": "List contents of directories in a tree-like format"
+    },
+    "File Operations": {
+        "cp": "Copy files and directories",
+        "cat": "Concatenate and display file content",
+        "mv": "Move or rename files",
+        "rm": "Remove files or directories",
+        "mkdir": "Make directories",
+        "rmdir": "Remove empty directories",
+        "touch": "Change file timestamps or create new files",
+        "ln": "Make links between files",
+	"nano": "An easy-to-use text editor",
+    	"vim": "A powerful text editor",
+    	"gedit": "A GUI text editor"
+    },
+    "File Viewing": {
+        "less": "View file content with backward navigation",
+        "more": "View file content",
+        "head": "Output the first part of files",
+        "tail": "Output the last part of files",
+        "grep": "Search for patterns in files",
+ 	"ls": "List directory contents"
+    },
+    "File Editing": {
+        "echo": "Display a line of text",
+        "printf": "Format and print data",
+        "paste": "Merge lines of files",
+        "cut": "Remove sections from each line of files",
+        "sort": "Sort lines in text files",
+        "uniq": "Report or omit repeated lines",
+        "sed": "Stream editor for filtering and transforming text",
+        "awk": "Pattern scanning and processing language",
+	"tr": "Translates or deletes characters"
+    },
+    "File Permissions": {
+        "chmod": "Change file mode bits, as in read, write, execute",
+        "chown": "Change file owner and group",
+        "chgrp": "Change group ownership"
+    },
+    "Search": {
+        "find": "Search for files in a directory hierarchy",
+        "locate": "Find files by name",
+	"which": "Shows the full path of (shell) commands",
+	"tree": "List contents of directories in a tree-like format"
+    },
+    "System and Process Management": {
+        "ps": "Report a snapshot of the current processes",
+        "top": "Display Linux processes",
+        "kill": "Send signal to a process",
+        "bg": "Put processes in the background",
+        "fg": "Put processes in the foreground",
+	"jobs": "List active jobs",
+	"systemctl": "Controls the systemd system and service manager"
+    },
+    "Disk Usage": {
+        "df": "Report file system disk space usage",
+        "du": "Estimate file and directory space usage"
+    },
+    "Networking": {
+        "ping": "Send ICMP ECHO_REQUEST to network hosts",
+        "netstat": "Network statistics",
+        "ifconfig": "Display or configure a network interface",
+        "ssh": "OpenSSH SSH client (remote login program)",
+        "scp": "Secure copy (remote file copy program)",
+        "nslookup": "Query Internet name servers interactively"
+    },
+    "Archiving": {
+        "tar": "An archiving utility",
+        "gzip": "Compress or expand files",
+        "gunzip": "Decompress files"
+    },
+    "Package Management": {
+        "apt": "APT package handling utility",
+        "apt-get": "APT package handling utility (legacy)",
+        "yum": "Interactive, rpm based, package manager"
+    },
+    "System Information": {
+        "uname": "Print system information",
+        "hostname": "Show or set the system's host name",
+        "whoami": "Print the user name associated with the current effective user ID",
+        "id": "Print real and effective user and group IDs"
+    },
+    "User Management": {
+        "useradd": "Create a new user or update default new user information",
+        "userdel": "Delete a user account and related files",
+        "usermod": "Modify a user account",
+        "groupadd": "Create a new group",
+        "groupdel": "Delete a group",
+        "groupmod": "Modify a group definition on the system"
+    },
+    "Special Characters": {
+        "||": "OR logical operator",
+        "&&": "AND logical operator",
+        ";": "Command separator",
+        ">": "Redirect output",
+        ">>": "Append output",
+        "<": "Redirect input",
+        "<<": "Here document",
+        "|": "Pipe",
+        "&": "Background process",
+        "$": "Variable substitution",
+        "#": "Comment / root (user) directory"
+    },
+    "Partitions": {
+        "mkfs": "Build a Linux file system",
+        "parted": "A partition manipulation program",
+        "fdisk": "Manipulate disk partition table",
+        "mount": "Mount a file system",
+        "umount": "Unmount file systems"
+    }
+}
