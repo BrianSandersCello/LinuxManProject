@@ -15,6 +15,6 @@ sudo cp commands.json /usr/local/bin/commands.json
 sudo cp commands2.txt /usr/local/bin/commands2.txt
 
 # Make the script executable
-sudo chmod +x /usr/local/bin/linuxmanual
-sudo chmod +x /usr/local/bin/linuxsearch
-echo "Installation completed. You can now run the script by typing 'linuxmanual' in the terminal."
+sudo chmod +x /usr/local/bin/manual
+sudo chmod +x /usr/local/bin/search
+echo "Installation completed. You can now run the scripts in the terminal. Type 'manual' For a menu-based manual, or 'search' and then a description of the command you're looking for, or the command itself."
